@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    basePath: "/savant",  // <=== comment out before running npm run dev
+    output: "export",  // <=== enables static exports
+    images: { unoptimized: true },
+    reactStrictMode: true
+};
 
 export default nextConfig;
