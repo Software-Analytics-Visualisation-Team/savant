@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import CustomNavbar from "./components/CustomNavbar";
+import { Navbar } from "./components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -9,6 +9,14 @@ export const metadata: Metadata = {
   title: "TU/e-SET-Savant",
   description: "Website for the Savant group of the SET cluster in TU/e",
 };
+
+const menuItems = [
+  { name: "Home", link: "./" },
+  { name: "Projects", link: "./projects" },
+  { name: "Education", link: "./education" },
+  { name: "Openings", link: "./openings" },
+  { name: "Contacts", link: "./contacts" },
+];
 
 
 
@@ -20,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Navbar/>
           {children}
       </body>
     </html>
