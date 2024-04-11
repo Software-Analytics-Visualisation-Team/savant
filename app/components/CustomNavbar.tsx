@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import {Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
+import {Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, NavbarContent, NavbarItem, Link} from "@nextui-org/react";
 import SavantLogo from "../../public/savant_brain.jpeg";
 
 export default function CustomNavBar() {
@@ -33,22 +33,22 @@ export default function CustomNavBar() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="end">
         <NavbarItem>
-          <Link color="foreground" href="./">
+          <Link className="hover:text-red-600" color="foreground" href="./">
             Home
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="./projects" aria-current="page">
+          <Link className="hover:text-red-600" color="foreground" href="./projects" aria-current="page">
             Projects
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="./education">
+          <Link className="hover:text-red-600" color="foreground" href="./education">
             Education
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="./contacts">
+          <Link className="hover:text-red-600" color="foreground" href="./contacts">
             Contacts
           </Link>
         </NavbarItem>
@@ -69,7 +69,7 @@ export default function CustomNavBar() {
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
-              className="w-full"
+              className="w-full hover:text-red-600"
               // color={
               //   index === 2 ? "warning" : index === menuItems.length - 1 ? "danger" : "foreground"
               // }

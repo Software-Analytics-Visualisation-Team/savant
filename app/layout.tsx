@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   description: "Website for the Savant group of the SET cluster in TU/e",
 };
 
+
+
 export default function RootLayout({
   children,
 }: Readonly<{

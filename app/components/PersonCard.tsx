@@ -1,5 +1,5 @@
 import React from "react";
-import {Card, CardHeader, CardBody, Avatar, Button} from "@nextui-org/react";
+import {Card, CardHeader, CardBody, Avatar} from "@nextui-org/react";
 
 
 interface UserProps {
@@ -18,7 +18,7 @@ export default function App(props: UserProps) {
               <Avatar isBordered radius="sm" className="w-20 h-20" src={props.image} />
               <div className="flex flex-col gap-1 items-start justify-center">
                 <a href={props.personalPage}>
-                <h4 className="text-xl font-semibold leading-none text-default-600 hover:text-blue-600">{props.name}</h4>
+                <h4 className="text-xl font-semibold leading-none text-default-600 hover:text-red-600">{props.name}</h4>
                 </a>
                 <h5 className="text-base tracking-tight text-default-400">{props.position}</h5>
               </div>
