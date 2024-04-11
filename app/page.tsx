@@ -6,7 +6,6 @@ import SatrioPortrait from "../public/portraits/satrio.jpeg"
 import FilipPortrait from "../public/portraits/filip.jpeg"
 import SavantLogo from "../public/savant.png"
 import { NextUIProvider } from "@nextui-org/react";
-import CustomNavbar from "./components/CustomNavbar";
 import PersonCard from "./components/PersonCard";
 
 
