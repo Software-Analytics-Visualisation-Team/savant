@@ -26,17 +26,17 @@ export default function Home() {
               priority
             />
             <div className="grid justify-center grid-cols-1 pl-2">
-              <div className="text-3xl font-sans">Software Architecture Visualisation & Analysis Team</div>
+              <div className="text-3xl font-sans text-black">Software Architecture Visualisation & Analysis Team</div>
               <div className="grid grid-cols-1">
-                <p className="">Research team part of the Software Engineering and Technology cluster</p>
-                <p className="italic">scalable and maintainable software</p>
+                <p className="text-black">Research team part of the Software Engineering and Technology cluster</p>
+                <p className="italic text-black">scalable and maintainable software</p>
               </div>
             </div>
           </div>
         </div>
         <div className="flex flex-col items-center p-6 lg:flex">
         <div className="text-3xl text-red-600 pb-3">Our Goal</div>
-        <div className="text-xl ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <div className="text-xl text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
         </div>
         <div className="text-3xl text-red-600 pb-0">Our Team</div>
         <div className="flex flex-row flex-wrap gap-2 justify-center font-sans pt-5 pb-12">
