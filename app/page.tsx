@@ -25,7 +25,7 @@ export default function Home() {
               height={250}
               priority
             />
-            <div className="grid justify-center grid-cols-1 pl-2">
+            <div className="grid justify-center grid-cols-1 pl-4">
               <div className="text-3xl font-sans text-black">Software Architecture Visualisation & Analysis Team</div>
               <div className="grid grid-cols-1">
                 <p className="text-black">Research team part of the Software Engineering and Technology cluster</p>
@@ -35,13 +35,16 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col items-center p-6 lg:flex">
-        <div className="text-3xl text-red-600 pb-3">Our Goal</div>
+        <div className="text-4xl flex w-full justify-center text-red-600">Our Goal</div>
         <div className="text-xl text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
         </div>
-        <div className="text-3xl text-red-600 pb-0">Our Team</div>
-        <div className="flex flex-row flex-wrap gap-2 justify-center font-sans pt-5 pb-12">
+
+        <div className="flex flex-row flex-wrap gap-2 justify-center font-sans">
+        <div className="text-4xl text-red-600 w-full flex justify-center">
+          Our Team
+          </div>
           <PersonCard name="Michel R.V. Chaudron"
-            position="Full Prof"
+            position="Full Professor"
             image={MichelPortrait.src}
             quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             personalPage="https://research.tue.nl/en/persons/michel-rv-chaudron"
@@ -65,7 +68,7 @@ export default function Home() {
             personalPage="https://research.tue.nl/en/persons/filip-zamfirov"
           />
         </div>
-        <div className="flex flex-col items-end h-2 w-full pt-3 pb-8 pr-3 lg:flex">
+        <div className="flex flex-col items-center h-2 w-full pt-3 pb-12 pr-3 pl-4 lg:flex bg-red-600">
           <div className="text-small">Part of the Software Engineering and Technology Cluster • Eindhoven University of Technology • 2024</div>
         </div>
       </main>
