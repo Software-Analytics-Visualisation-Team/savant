@@ -19,10 +19,10 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    {name: "Projects", route: "/projects"},
-    {name: "Education", route: "/education"},
-    {name: "Positions", route: "/openings"},
-    {name: "Contact us", route: "/contacts"},
+    {name: "Projects", route: "./projects"},
+    {name: "Education", route: "./education"},
+    {name: "Positions", route: "./openings"},
+    {name: "Contact us", route: "./contacts"},
   ];
 
   return (
@@ -39,7 +39,7 @@ export function Navbar() {
           className="sm:hidden"
         />
         <NavbarBrand className="gap-2">
-        <Link href="/">
+        <Link href="./">
         <Image src={SavantLogo} alt="Savant logo" width={45} height={45}/>
           <p className="text-serif text-red-600">SAVANT</p>
           </Link>
@@ -49,22 +49,22 @@ export function Navbar() {
 
       <NavbarContent justify="end" className="hidden sm:flex gap-4 data-[justify=end]:flex-grow-0">
       <NavbarItem>
-          <Link className="hover:text-red-600" color="foreground" href="/projects">
+          <Link className="hover:text-red-600" color="foreground" href="./projects">
             Projects
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="hover:text-red-600" color="foreground" href="/education">
+          <Link className="hover:text-red-600" color="foreground" href="./education">
             Education
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="hover:text-red-600" color="foreground" href="/openings">
+          <Link className="hover:text-red-600" color="foreground" href="./openings">
             Positions
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="hover:text-red-600" color="foreground" href="/contacts">
+          <Link className="hover:text-red-600" color="foreground" href="./contacts">
             Contact us
           </Link>
         </NavbarItem>
