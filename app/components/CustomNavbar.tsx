@@ -5,10 +5,10 @@ import SavantLogo from "../../public/savant_brain.jpeg";
 
 export default function CustomNavBar() {
   const menuItems = [
-    "Home",
-    "Projects",
-    "Education",
-    "Contacts",
+    {name:"Home", link:"./"},
+    {name:"Projects", link:"./projects"},
+    {name:"Education", link:"./education"},
+    {name:"Contacts", link:"./contacts"},
   ];
 
   return (
@@ -33,22 +33,22 @@ export default function CustomNavBar() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="end">
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="./">
             Home
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#" aria-current="page">
+          <Link color="foreground" href="./projects" aria-current="page">
             Projects
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="./education">
             Education
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="./contacts">
             Contacts
           </Link>
         </NavbarItem>
@@ -74,10 +74,10 @@ export default function CustomNavBar() {
               //   index === 2 ? "warning" : index === menuItems.length - 1 ? "danger" : "foreground"
               // }
               color="foreground"
-              href="#"
+              href={item.link}
               size="lg"
             >
-              {item}
+              {item.name}
             </Link>
           </NavbarMenuItem>
         ))}
