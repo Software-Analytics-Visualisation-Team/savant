@@ -13,21 +13,20 @@ import PersonCard from "./components/PersonCard";
 export default function Home() {
   return (
     <NextUIProvider>
-      <CustomNavbar />
       <main className="flex min-h-screen flex-col items-center justify-between bg-white">
 
         <div className="z-10 max-w-5xl w-screen items-center justify-between lg:flex pb-12">
 
-          <div className="flex w-full pt-8 ">
+          <div className="flex flex-wrap items-center justify-center w-full pt-8 ">
             <Image
               src={SavantLogo}
               alt="Savant Logo"
-              className=""
-              width={300}
-              height={300}
+              className="min-w-250"
+              width={250}
+              height={250}
               priority
             />
-            <div className="grid grid-cols-1">
+            <div className="grid justify-center grid-cols-1 pl-2">
               <div className="text-3xl font-sans">Software Architecture Visualisation & Analysis Team</div>
               <div className="grid grid-cols-1">
                 <p className="">Research team part of the Software Engineering and Technology cluster</p>
