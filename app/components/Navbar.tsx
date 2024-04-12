@@ -29,7 +29,6 @@ export function Navbar() {
     <NextUINavbar
       maxWidth="xl"
       classNames={{ wrapper: "gap-6" }}
-      // add this line
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
     >
@@ -40,8 +39,8 @@ export function Navbar() {
         />
         <NavbarBrand className="gap-2">
         <Link href="./">
-        <Image src={SavantLogo} alt="Savant logo" width={45} height={45}/>
-          <p className="text-serif text-red-600">SAVANT</p>
+        {/* <Image src={SavantLogo} alt="Savant logo" width={45} height={45}/> */}
+          <p className="text-serif text-red-600">Software Analytics & Visualisation Team</p>
           </Link>
 
         </NavbarBrand>

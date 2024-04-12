@@ -12,31 +12,35 @@ import PersonCard from "./components/PersonCard";
 export default function Home() {
   return (
     <NextUIProvider>
-      <main className="flex min-h-screen flex-col items-center justify-between bg-white">
+      <main className="flex min-h-screen flex-col items-center justify-between bg-gray-50">
 
-        <div className="z-10 max-w-5xl w-screen items-center justify-between lg:flex pb-12">
+        <div className="z-10 max-w-7xl w-full items-center justify-between lg:flex pb-12">
 
-          <div className="flex flex-wrap items-center justify-center w-full pt-8 ">
-            <Image
+          <div className="flex flex-wrap items-center justify-center pt-8 ">
+            {/* <Image
               src={SavantLogo}
               alt="Savant Logo"
               className="min-w-250"
               width={250}
               height={250}
               priority
-            />
-            <div className="grid justify-center grid-cols-1 pl-4">
-              <div className="text-3xl font-sans text-black">Software Architecture Visualisation & Analysis Team</div>
-              <div className="grid grid-cols-1">
-                <p className="text-black">Research team part of the Software Engineering and Technology cluster</p>
-                <p className="italic text-black">scalable and maintainable software</p>
+            /> */}
+            <div className="justify-center items center pl-4">
+              <div className="text-5xl font-sanstext-black">Software Analytics & Visualisation Team</div>
+              <div className="">
+                <p className="text-3xl text-black">Research team part of the Software Engineering and Technology cluster</p>
+                {/* <p className="italic text-black">scalable and maintainable software</p> */}
               </div>
             </div>
           </div>
         </div>
         <div className="flex flex-col items-center p-6 lg:flex">
-        <div className="text-4xl flex w-full justify-center text-red-600">Our Goal</div>
-        <div className="text-xl text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <div className="text-4xl flex justify-center text-red-600">Our Goal</div>
+        <div className="text-xl text-black">
+In the dynamic landscape of software engineering, we are a group of passionate researchers collaborating to push the boundaries of knowledge. Our goal is twofold:
+Software Architecture: Delve into the intricate design and organization of software systems. Our focus spans the fundamental properties of systems, encompassing elements, relationships, and the principles that guide design and evolution. By understanding the interplay of structure, behavior, execution, and analysis, we pave the way for robust and scalable software architectures.
+Software Analytics: Armed with data-driven insights, we explore software quality, reliability, and performance. Leveraging techniques from machine learning and data science, we unravel patterns, identify bottlenecks, and enhance decision-making. Our work bridges the gap between theory and practice, ensuring that software-intensive systems thrive in an ever-evolving digital landscape.
+Together, we want to champion innovation, foster collaboration, and contribute to the advancement of software engineering.</div>
         </div>
 
         <div className="flex flex-row flex-wrap gap-2 justify-center font-sans">
@@ -69,7 +73,7 @@ export default function Home() {
           />
         </div>
         <div className="flex flex-col items-center h-2 w-full pt-3 pb-12 pr-3 pl-4 lg:flex bg-red-600">
-          <div className="text-small">Part of the Software Engineering and Technology Cluster • Eindhoven University of Technology • 2024</div>
+          <div className="text-small">Part of Software Engineering and Technology Cluster • Eindhoven University of Technology • 2024</div>
         </div>
       </main>
     </NextUIProvider>
