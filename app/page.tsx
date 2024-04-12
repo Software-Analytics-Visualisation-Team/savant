@@ -26,7 +26,7 @@ export default function Home() {
               priority
             /> */}
             <div className="justify-center items center pl-4">
-              <div className="text-5xl font-sanstext-black">Software Analytics & Visualisation Team</div>
+              <div className="text-5xl font-sans text-red-600">Software Analytics & Visualisation Team</div>
               <div className="">
                 <p className="text-3xl text-black">Research team part of the Software Engineering and Technology cluster</p>
                 {/* <p className="italic text-black">scalable and maintainable software</p> */}
