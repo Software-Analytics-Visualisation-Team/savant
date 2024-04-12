@@ -8,25 +8,27 @@ export default function ContactsPage() {
     <div className="flex flex-col items-center bg-gray-50 justify-center min-h-screen">
       <div className="max-w-7xl w-full p-6 bg-gray-50">
         <h1 className="text-7xl font-bold mb-4 pb-24">Contact</h1>
-        <div className="grid grid-cols-2">
-          <div className="mb-4 justify-start">
-            <h2 className="text-4xl font-semibold mb-2">Team Lead</h2>
-            <ContactCard name="Michel R.V. Chaudron"
-              position="Full Professor"
-              image={MichelPortrait.src}
-              email="m.r.v.chaudron@tue.nl"
-              personalPage="https://research.tue.nl/en/persons/michel-rv-chaudron"
-            />
-          </div>
-          <div className="mb-4">
-            <h2 className="text-4xl font-semibold mb-2">Secretariat</h2>
-            <p className="text-gray-600">
-              Agnes van den Reek
-              <br />
-              Email: a.k.m.v.d.reek@tue.nl
-            </p>
-          </div>
-        </div>
+        <div className="flex flex-wrap">
+  <div className="w-full md:w-1/2 mb-4 md:mb-0">
+    <h2 className="text-4xl font-semibold mb-2">Team Lead</h2>
+    <ContactCard
+      name="Michel R.V. Chaudron"
+      position="Full Professor"
+      image={MichelPortrait.src}
+      email="m.r.v.chaudron@tue.nl"
+      personalPage="https://research.tue.nl/en/persons/michel-rv-chaudron"
+    />
+  </div>
+  <div className="w-full md:w-1/2 mb-4">
+    <h2 className="text-4xl font-semibold mb-2">Secretariat</h2>
+    <p className="text-gray-600">
+      Agnes van den Reek
+      <br />
+      Email: a.k.m.v.d.reek@tue.nl
+    </p>
+  </div>
+</div>
+
 
         <div className="mb-4 b">
           <h2 className="text-4xl font-semibold mb-2">Visiting Address</h2>
