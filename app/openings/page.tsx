@@ -1,6 +1,13 @@
 
 // pages/jobs.js
 import React from "react";
+import { Navbar } from "../components/Navbar"
+
+const menuItems = [
+  {name: "Projects", route: "/projects"},
+  {name: "Positions", route: "/openings"},
+  {name: "Contact us", route: "/contacts"},
+];
 
 const jobs = [
   {
@@ -18,7 +25,9 @@ const jobs = [
 
 export default function JobsPage() {
   return (
-    <div className="bg-gray-100 min-h-screen p-8">
+    <div>
+    <Navbar menuItems={menuItems} pageSelected=""/>
+    <div className="bg-gray-50 min-h-screen p-8">
       <h1 className="text-3xl font-bold mb-4">Job Openings</h1>
       <ul className="space-y-4">
         {jobs.map((job, index) => (
@@ -36,6 +45,7 @@ export default function JobsPage() {
           </li>
         ))}
       </ul>
+    </div>
     </div>
   );
 };

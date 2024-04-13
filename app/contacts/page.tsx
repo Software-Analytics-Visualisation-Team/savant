@@ -2,10 +2,19 @@
 import React from "react";
 import ContactCard from "../components/ContactCard"
 import MichelPortrait from "../../public/portraits/michel.jpeg"
+import { Navbar } from "../components/Navbar"
+
+const menuItems = [
+  {name: "Projects", route: "/projects"},
+  {name: "Positions", route: "/openings"},
+  {name: "Contact us", route: "/contacts"},
+];
 
 export default function ContactsPage() {
   return (
-    <div className="flex flex-col items-center bg-gray-50 justify-center min-h-screen">
+    <div>
+      <Navbar menuItems={menuItems} pageSelected=""/>
+      <div className="flex flex-col items-center bg-gray-50 justify-center min-h-screen">
       <div className="max-w-7xl w-full p-6 bg-gray-50">
         <h1 className="text-7xl font-bold mb-4 pb-24">Contact</h1>
         <div className="flex flex-wrap">
@@ -52,5 +61,7 @@ export default function ContactsPage() {
         </div>
       </div>
     </div>
+    </div>
+    
   );
 };

@@ -15,14 +15,18 @@ import {
 import { Link } from "@nextui-org/react";
 import SavantLogo from "../../public/savant_brain.jpeg";
 
-export function Navbar() {
+interface NavbarProps {
+  menuItems: {name: string, route: string}[]
+  pageSelected: string
+}
+
+export function Navbar(props: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    {name: "Projects", route: "./projects"},
-    {name: "Education", route: "./education"},
-    {name: "Positions", route: "./openings"},
-    {name: "Contact us", route: "./contacts"},
+    {name: "Projects", route: "/projects"},
+    {name: "Positions", route: "/openings"},
+    {name: "Contact us", route: "/contacts"},
   ];
 
   return (
@@ -40,48 +44,65 @@ export function Navbar() {
         <NavbarBrand className="gap-2">
         <Link href="./">
         {/* <Image src={SavantLogo} alt="Savant logo" width={45} height={45}/> */}
-          <p className="text-serif text-red-600">Software Analytics & Visualisation Team</p>
+          <p className="text-serif font-bold text-red-600">Software Analytics & Visualisation Team</p>
           </Link>
 
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent justify="end" className="hidden sm:flex gap-4 data-[justify=end]:flex-grow-0">
-      <NavbarItem>
-          <Link className="hover:text-red-600" color="foreground" href="./projects">
-            Projects
-          </Link>
-        </NavbarItem>
+        {props.menuItems !== undefined && props.menuItems.length == 0 &&
+          menuItems.map((item) => (
         <NavbarItem>
-          <Link className="hover:text-red-600" color="foreground" href="./education">
-            Education
+          <Link className="hover:text-red-600" color="foreground" href={item.route}>
+            {item.name}
           </Link>
         </NavbarItem>
-        <NavbarItem>
-          <Link className="hover:text-red-600" color="foreground" href="./openings">
-            Positions
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link className="hover:text-red-600" color="foreground" href="./contacts">
-            Contact us
-          </Link>
-        </NavbarItem>
+          ))
+        }
+
+        {props.menuItems !== undefined && props.menuItems.length > 0 &&
+          props.menuItems.map((item) => (
+            <NavbarItem>
+              <Link className="hover:text-red-600" color="foreground" href={item.route}>
+                {item.name}
+              </Link>
+            </NavbarItem>
+              ))
+        }
       </NavbarContent>
 
       <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              color={"foreground"}
-              className="w-full hover:text-red-600"
-              href={item.route}
-              size="lg"
-            >
-              {item.name}
-            </Link>
-          </NavbarMenuItem>
-        ))}
+        {props.menuItems == undefined &&
+          menuItems.map((item, index) => (
+            <NavbarMenuItem key={`${item}-${index}`}>
+              <Link
+                color={"foreground"}
+                className="w-full hover:text-red-600"
+                href={item.route}
+                size="lg"
+              >
+                {item.name}
+              </Link>
+            </NavbarMenuItem>
+          ))
+        }
+
+        {props.menuItems !== undefined && props.menuItems.length > 0 &&
+          props.menuItems.map((item, index) => (
+            <NavbarMenuItem key={`${item}-${index}`}>
+              <Link
+                color={"foreground"}
+                className="w-full hover:text-red-600"
+                href={item.route}
+                size="lg"
+              >
+                {item.name}
+              </Link>
+            </NavbarMenuItem>
+          ))
+        }
+        
       </NavbarMenu>
     </NextUINavbar>
   );

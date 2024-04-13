@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   description: "Website for the Savant group of the SET cluster in TU/e",
 };
 
-const menuItems = [
-  { name: "Home", link: "./" },
-  { name: "Projects", link: "./projects" },
-  { name: "Education", link: "./education" },
-  { name: "Openings", link: "./openings" },
-  { name: "Contacts", link: "./contacts" },
-];
+// const menuItems = [
+//   { name: "Home", link: "./" },
+//   { name: "Projects", link: "./projects" },
+//   { name: "Education", link: "./education" },
+//   { name: "Openings", link: "./openings" },
+//   { name: "Contacts", link: "./contacts" },
+// ];
 
 
 
@@ -28,7 +28,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar/>
           {children}
       </body>
     </html>
