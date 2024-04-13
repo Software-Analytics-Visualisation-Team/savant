@@ -20,7 +20,7 @@ interface NavbarProps {
   pageSelected: string
 }
 
-export function Navbar(props: NavbarProps) {
+export default function Navbar(props: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [

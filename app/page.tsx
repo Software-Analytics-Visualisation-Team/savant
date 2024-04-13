@@ -7,7 +7,8 @@ import FilipPortrait from "../public/portraits/filip.jpeg"
 import SavantLogo from "../public/savant.png"
 import { NextUIProvider } from "@nextui-org/react";
 import PersonCard from "./components/PersonCard";
-import { Navbar } from "./components/Navbar"
+import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
 
 const menuItems = [
   {name: "Projects", route: "./projects"},
@@ -79,9 +80,7 @@ Together, we want to champion innovation, foster collaboration, and contribute t
             personalPage="https://research.tue.nl/en/persons/filip-zamfirov"
           />
         </div>
-        <div className="flex flex-col items-center h-2 w-full pt-3 pb-12 pr-3 pl-4 lg:flex bg-red-600">
-          <div className="text-small">Part of Software Engineering and Technology Cluster • Eindhoven University of Technology • 2024</div>
-        </div>
+        <Footer/>
       </main>
     </NextUIProvider>
   );
