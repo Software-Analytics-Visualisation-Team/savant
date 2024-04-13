@@ -52,8 +52,8 @@ export function Navbar(props: NavbarProps) {
 
       <NavbarContent justify="end" className="hidden sm:flex gap-4 data-[justify=end]:flex-grow-0">
         {props.menuItems !== undefined && props.menuItems.length == 0 &&
-          menuItems.map((item) => (
-        <NavbarItem>
+          menuItems.map((item, index) => (
+        <NavbarItem key={`mnp${item}-${index}`}>
           <Link className="hover:text-red-600" color="foreground" href={item.route}>
             {item.name}
           </Link>
@@ -62,8 +62,8 @@ export function Navbar(props: NavbarProps) {
         }
 
         {props.menuItems !== undefined && props.menuItems.length > 0 &&
-          props.menuItems.map((item) => (
-            <NavbarItem>
+          props.menuItems.map((item, index) => (
+            <NavbarItem key={`mp${item}-${index}`}>
               <Link className="hover:text-red-600" color="foreground" href={item.route}>
                 {item.name}
               </Link>
@@ -75,7 +75,7 @@ export function Navbar(props: NavbarProps) {
       <NavbarMenu>
         {props.menuItems == undefined &&
           menuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
+            <NavbarMenuItem key={`np${item}-${index}`}>
               <Link
                 color={"foreground"}
                 className="w-full hover:text-red-600"
@@ -90,7 +90,7 @@ export function Navbar(props: NavbarProps) {
 
         {props.menuItems !== undefined && props.menuItems.length > 0 &&
           props.menuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
+            <NavbarMenuItem key={`p${item}-${index}`}>
               <Link
                 color={"foreground"}
                 className="w-full hover:text-red-600"
