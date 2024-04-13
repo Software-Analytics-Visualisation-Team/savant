@@ -4,9 +4,9 @@ import ProjectCard from "../components/ProjectCard";
 import { Navbar } from "../components/Navbar"
 
 const menuItems = [
-  {name: "Projects", route: "/projects"},
-  {name: "Positions", route: "/openings"},
-  {name: "Contact us", route: "/contacts"},
+  {name: "Projects", route: "./projects"},
+  {name: "Positions", route: "./openings"},
+  {name: "Contact us", route: "./contacts"},
 ];
 
 export default function Home() {
