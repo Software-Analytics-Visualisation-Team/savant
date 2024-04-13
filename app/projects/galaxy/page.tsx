@@ -7,7 +7,7 @@ import FilipPortrait from "../../../public/portraits/filip.jpeg"
 import { Navbar } from "../../components/Navbar"
 
 const menuItems = [
-  {name: "Projects", route: "./"},
+  {name: "Projects", route: ".."},
   {name: "Positions", route: "../openings"},
   {name: "Contact us", route: "../contacts"},
 ];
