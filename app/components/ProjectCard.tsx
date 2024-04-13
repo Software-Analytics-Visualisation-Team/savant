@@ -43,10 +43,19 @@ export default function ProjectCard(props: ProjectProps) {
                         <div className="flex justify-center">
                         {props.projectDescription}
                         </div>
-                        <div className="grid grid-cols-3 gap-2 items-center">
-                            <div>Contacts: {props.projectContact}</div>
-                            <div>Funding: {props.funding}</div>
-                            <div>Status: {props.status}</div>
+                        <div className="flex flex-rows gap-2">
+                            <div className="grid grid-cols-1 justify-start">
+                                <div className="font-bold">Contacts:</div>
+                                <div>{props.projectContact}</div>
+                            </div>
+                            {/* <div className="grid grid-cols-1">
+                                <div className="font-bold">Funding:</div>
+                                <div>{props.funding}</div>
+                            </div> */}
+                            <div className="grid grid-cols-1 justify-end">
+                                <div className="font-bold">Status:</div>
+                                <div>{props.status}</div>
+                            </div>
                         </div>
                     </div>
                 </div>

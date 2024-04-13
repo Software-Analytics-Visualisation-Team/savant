@@ -17,7 +17,7 @@ export default function ContactsPage() {
       <Navbar menuItems={menuItems} pageSelected="" />
       <div className="flex flex-col items-center bg-gray-50 gap-8 justify-center min-h-screen">
         <div className="max-w-7xl w-full bg-gray-50">
-          <h1 className="text-5xl font-bold pb-6 mb-4">Contact</h1>
+          <h1 className="text-5xl font-bold text-red-600 pb-12 pt-6 mb-4">Contact</h1>
           <div className="flex flex-wrap">
             <div className="w-full md:w-1/2 mb-4 md:mb-0">
               <h2 className="text-4xl font-semibold mb-2">Team Lead</h2>
@@ -38,7 +38,7 @@ export default function ContactsPage() {
               </p>
             </div>
           </div>
-          <div className="mb-4 b">
+          <div className="mb-4 p-6">
             <h2 className="text-4xl font-semibold mb-2">Visiting Address</h2>
             <iframe
               title="Google Maps"
