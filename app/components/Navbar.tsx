@@ -24,9 +24,9 @@ export function Navbar(props: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    {name: "Projects", route: "/projects"},
-    {name: "Positions", route: "/openings"},
-    {name: "Contact us", route: "/contacts"},
+    {name: "Projects", route: "./projects"},
+    {name: "Positions", route: "./openings"},
+    {name: "Contact us", route: "./contacts"},
   ];
 
   return (
