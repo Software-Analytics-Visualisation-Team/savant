@@ -24,7 +24,7 @@ export default function App(props: UserProps) {
               </div>
             </div>
           </CardHeader>
-          <CardBody className="px-3 py-0 text-base italic text-default-400">
+          <CardBody className="px-3 py-0 text-base text-default-500">
             <p>{props.quote}</p>
             <span className="pt-2">
             </span>

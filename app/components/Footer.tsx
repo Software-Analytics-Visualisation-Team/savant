@@ -2,8 +2,17 @@
 
 export default function Footer() {
     return (
-        <div className="flex flex-col items-center h-2 w-full pt-3 pb-12 pr-3 pl-4 lg:flex bg-red-600">
-            <div className="text-small">Part of Software Engineering and Technology Cluster • Eindhoven University of Technology • 2024</div>
-        </div>
+<div className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+  <div className="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
+    <p className="text-sm text-gray-600">
+      Part of the Software Engineering & Technology Cluster
+    </p>
+    <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
+      <li>
+        <a href="https://www.tue.nl/en/" className="text-sm text-gray-600 hover:text-red-600">Eindhoven University of Technology</a>
+      </li>
+    </ul>
+  </div>
+</div>
     );
 }
