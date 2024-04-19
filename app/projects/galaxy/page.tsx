@@ -19,7 +19,7 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center bg-gray-50 min-h-screen">
 
                 <div className="max-w-5xl">
-                    <h1 className="text-3xl font-bold text-red-600 mb-4">The Galaxy Project</h1>
+                    <h1 className="text-3xl font-bold text-red-600 mb-4">The Andromeda Platform</h1>
                     <p className="text-gray-600 mb-4">
                         The Galaxy Project is an open-source, web-based platform designed for data-intensive biomedical research. The platform integrates various tools into cohesive workflows, allowing users to perform analyses through a user-friendly web interface. Additionally, it supports data integration, analysis persistence and much more. We are investigating how to leverage all of the Galaxy infrastructure to easily construct complex software analyses which are easily shared among tool builders, researchers and software practitioners.
                     </p>
@@ -30,7 +30,6 @@ export default function Home() {
                             width="100%"
                             height="550"
                             src="https://www.youtube.com/embed/F2aATIRG2-o?autoplay=0"
-                            frameBorder="0"
                             allowFullScreen
                         ></iframe>
                     </div>
