@@ -42,7 +42,7 @@ export default function Navbar(props: NavbarProps) {
           className="sm:hidden"
         />
         <NavbarBrand className="gap-2">
-        <Link href="/">
+        <Link href="/savant">
         {/* <Image src={SavantLogo} alt="Savant logo" width={45} height={45}/> */}
           <p className="text-serif font-bold text-sm sm:text-lg text-red-600">Software Analytics & Visualisation Team</p>
           </Link>
