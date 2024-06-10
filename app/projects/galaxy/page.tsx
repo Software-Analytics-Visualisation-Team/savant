@@ -5,7 +5,7 @@ import MichelPortrait from "../../../public/portraits/michel.jpeg"
 import FilipPortrait from "../../../public/portraits/filip.jpeg"
 import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
-import { ANDROMEDA_PLATFORM_DESC, ANDROMEDA_PLATFORM_TITLE } from "@/app/constants"
+import {ANDROMEDA_PLATFORM_TITLE, ANDROMEDA_PLATFORM_DESC, ANDROMEDA_PLATFORM_USE_DESC, ANDROMEDA_COLLABORATOR_DESC } from "@/app/constants"
 
 const menuItems = [
     { name: "Projects", route: "../projects" },
@@ -21,10 +21,19 @@ export default function Home() {
 
                 <div className="max-w-5xl">
                     <h1 className="text-3xl font-bold text-red-600 mb-4">{ANDROMEDA_PLATFORM_TITLE}</h1>
+                    <h1 className="text-2xl font-bold text-red-700 mb-4">What is the Andromeda Platform?</h1>
                     <p className="text-gray-600 mb-4">
                        {ANDROMEDA_PLATFORM_DESC}
                     </p>
-                    {/* Video Section */}
+                    <h1 className="text-2xl font-bold text-red-700 mb-4">How can I use the platform?</h1>
+                    <p className="text-gray-600 mb-4">
+                       {ANDROMEDA_PLATFORM_USE_DESC}
+                    </p>
+                    <h1 className="text-2xl font-bold text-red-700 mb-4">How can I become a collaborator?</h1>
+                    <p className="text-gray-600 mb-4">
+                       {ANDROMEDA_COLLABORATOR_DESC}
+                    </p>
+                    <h1 className="text-2xl font-bold text-red-700 mb-4">Demo</h1>
                     <div className="mb-4">
                         <iframe
                             title="Project Video"
