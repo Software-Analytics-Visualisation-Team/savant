@@ -56,7 +56,7 @@ export default function IndustrialProjectsPage() {
 
     </div>
               <p className="text-gray-600 mb-4">
-              Is your company or your team grappling with complex software systems? Struggling to decipher intricate architectures? We are experienced in working on practical challenges, and are activelly collaborating with industrial parterns and helping them solve complex problems conserning software analysis and architecture visualization.
+              Is your company or your team grappling with complex software systems? Struggling to decipher intricate architectures? We are experienced in working on practical challenges, and are activelly collaborating with industrial partners, helping them solve complex issues conserning software analysis and architecture visualization.
               </p>
               <h1 className="text-2xl font-bold text-red-700 mb-4">What We Offer</h1>
               <p className="text-gray-600 mb-4">
