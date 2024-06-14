@@ -6,9 +6,10 @@ import Footer from "../components/Footer";
 import { ANDROMEDA_PLATFORM_CONTACTS, ANDROMEDA_PLATFORM_DESC, ANDROMEDA_PLATFORM_FUNDING, ANDROMEDA_PLATFORM_HREF, ANDROMEDA_PLATFORM_IMAGE_SOURCE, ANDROMEDA_PLATFORM_STATUS, ANDROMEDA_PLATFORM_TITLE, CLASSVIZ_CONTACTS, CLASSVIZ_DESC, CLASSVIZ_FUNDING, CLASSVIZ_HREF, CLASSVIZ_IMAGE_SOURCE, CLASSVIZ_STATUS, CLASSVIZ_TITLE, DEDUCTIVE_SAR_CONTACTS, DEDUCTIVE_SAR_FUNDING, DEDUCTIVE_SAR_HREF, DEDUCTIVE_SAR_IMAGE_SOURCE, DEDUCTIVE_SAR_INFO, DEDUCTIVE_SAR_STATUS, DEDUCTIVE_SAR_TITLE } from "../constants";
 
 const menuItems = [
-  {name: "Projects", route: "./projects"},
-  {name: "Positions", route: "./openings"},
-  {name: "Contact us", route: "./contacts"},
+  { name: "Industrial Projects", route: "./industrial-projects" },
+  { name: "Academic Projects", route: "./projects" },
+  { name: "Positions", route: "./openings" },
+  { name: "Contact us", route: "./contacts" },
 ];
 
 export default function Home() {

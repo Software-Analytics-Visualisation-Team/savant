@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 
 const menuItems = [
-  { name: "Industrial Projects", route: "./industrial-projects" },
+  { name: "Industrial Projects", route: "./industrial-partners" },
   { name: "Academic Projects", route: "./projects" },
   { name: "Positions", route: "./openings" },
   { name: "Contact us", route: "./contacts" },

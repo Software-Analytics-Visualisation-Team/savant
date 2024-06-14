@@ -8,7 +8,8 @@ import Footer from "../../components/Footer"
 import {ANDROMEDA_PLATFORM_TITLE, ANDROMEDA_PLATFORM_DESC, ANDROMEDA_PLATFORM_USE_DESC, ANDROMEDA_COLLABORATOR_DESC } from "@/app/constants"
 
 const menuItems = [
-    { name: "Projects", route: "../projects" },
+    { name: "Industrial Projects", route: "../industrial-projects" },
+    { name: "Academic Projects", route: "../projects" },
     { name: "Positions", route: "../openings" },
     { name: "Contact us", route: "../contacts" },
 ];
