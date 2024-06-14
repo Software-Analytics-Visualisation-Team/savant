@@ -3,6 +3,7 @@
 import ContactCard from "../../components/ContactCard"
 import MichelPortrait from "../../../public/portraits/michel.jpeg"
 import FilipPortrait from "../../../public/portraits/filip.jpeg"
+import WorkflowImage from "../../../public/andromeda-workflow.png"
 import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
 import {ANDROMEDA_PLATFORM_TITLE, ANDROMEDA_PLATFORM_DESC, ANDROMEDA_PLATFORM_USE_DESC, ANDROMEDA_COLLABORATOR_DESC } from "@/app/constants"
@@ -18,10 +19,16 @@ export default function Home() {
     return (
         <div>
             <Navbar menuItems={menuItems} pageSelected="" />
+
             <div className="flex flex-col items-center justify-center bg-gray-50 min-h-screen">
 
                 <div className="max-w-5xl">
-                    <h1 className="text-3xl font-bold text-red-600 mb-4">{ANDROMEDA_PLATFORM_TITLE}</h1>
+                    <h1 className="text-3xl font-bold text-red-600 mb-4 pt-4">{ANDROMEDA_PLATFORM_TITLE}</h1>
+                    <img
+                    src={WorkflowImage.src} // Replace with your actual image URL
+                    alt="Full-width image"
+                    style={{ width: 'auto', height: 'auto' }}
+                />
                     <h1 className="text-2xl font-bold text-red-700 mb-4">What is the Andromeda Platform?</h1>
                     <p className="text-gray-600 mb-4">
                        {ANDROMEDA_PLATFORM_DESC}
