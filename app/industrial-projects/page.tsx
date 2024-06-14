@@ -25,15 +25,17 @@ const tools = [
   },
   {
     key:"ClassViz",
-    name: <Link className="hover:text-red-600" color="foreground" href="./projects/galaxy">
+    name: <Link className="hover:text-red-600" color="foreground" href="./projects">
     ClassViz
   </Link>,
     description: 'Explore interactivelly software architecture visualisations. Understand your software’s structure, dependencies, and hotspots at a glance.',
   },
   {
     key:"BubbleTea",
-    name: 'Layered Bubble Tea Software Architecture Visualization',
-    description: 'Profile application performance and optimize resource usage.',
+    name: <Link className="hover:text-red-600" color="foreground" href="./projects">
+    BubbleTeaVis
+  </Link>,
+    description: 'Inspect your code base through the lens of a layered software architecture.',
   },
 ];
 
