@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "TU/e-SET-Savant",
-  description: "Website for the Savant group of the SET cluster in TU/e",
+  title: 'TU/e-SET-Savant',
+  description: 'Website for the Savant group of the SET cluster in TU/e'
 };
 
 // const menuItems = [
@@ -17,18 +17,14 @@ export const metadata: Metadata = {
 //   { name: "Contacts", link: "./contacts" },
 // ];
 
-
-
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-          {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

@@ -1,15 +1,15 @@
-'use client'
-import React from "react";
-import ContactCard from "../components/ContactCard"
-import MichelPortrait from "../../public/portraits/michel.jpeg"
-import Navbar from "../components/Navbar"
-import Footer from "../components/Footer"
+'use client';
+import React from 'react';
+import ContactCard from '../components/ContactCard';
+import MichelPortrait from '../../public/portraits/michel.jpeg';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const menuItems = [
-  { name: "Industrial Projects", route: "./industrial-projects" },
-  { name: "Academic Projects", route: "./projects" },
-  { name: "Positions", route: "./openings" },
-  { name: "Contact us", route: "./contacts" },
+  { name: 'Industrial Projects', route: './industrial-projects' },
+  { name: 'Academic Projects', route: './projects' },
+  { name: 'Positions', route: './openings' },
+  { name: 'Contact us', route: './contacts' }
 ];
 
 export default function ContactsPage() {
@@ -64,4 +64,4 @@ export default function ContactsPage() {
       <Footer />
     </div>
   );
-};
+}

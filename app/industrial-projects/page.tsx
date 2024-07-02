@@ -1,43 +1,55 @@
-
 // pages/jobs.js
-import React from "react";
-import Navbar from "../components/Navbar"
-import Footer from "../components/Footer"
-import { Link } from "@nextui-org/react";
-import Image from "next/image";
-import ContactCard from "../components/ContactCard"
-import IndustryImage from "../../public/industry-image-3.jpg"
-import MichelPortrait from "../../public/portraits/michel.jpeg"
+import React from 'react';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import { Link } from '@nextui-org/react';
+import Image from 'next/image';
+import ContactCard from '../components/ContactCard';
+import IndustryImage from '../../public/industry-image-3.jpg';
+import MichelPortrait from '../../public/portraits/michel.jpeg';
 
 const menuItems = [
-  { name: "Industrial Projects", route: "./industrial-projects" },
-  { name: "Academic Projects", route: "./projects" },
-  { name: "Positions", route: "./openings" },
-  { name: "Contact us", route: "./contacts" },
+  { name: 'Industrial Projects', route: './industrial-projects' },
+  { name: 'Academic Projects', route: './projects' },
+  { name: 'Positions', route: './openings' },
+  { name: 'Contact us', route: './contacts' }
 ];
 
 const tools = [
   {
-    key: "AP",
-    name: <Link className="hover:text-red-600" color="foreground" href="./projects/galaxy">
-      Andromeda Platform
-    </Link>,
-    description: 'Custom analysis of your source code based on your needs. This platform provides a easily customisable way to analyse various aspects of your systems. Visualise your software, identify performance bottlenecks, detect security vulnerabilities.',
+    key: 'AP',
+    name: (
+      <Link
+        className="hover:text-red-600"
+        color="foreground"
+        href="./projects/galaxy"
+      >
+        Andromeda Platform
+      </Link>
+    ),
+    description:
+      'Custom analysis of your source code based on your needs. This platform provides a easily customisable way to analyse various aspects of your systems. Visualise your software, identify performance bottlenecks, detect security vulnerabilities.'
   },
   {
-    key: "ClassViz",
-    name: <Link className="hover:text-red-600" color="foreground" href="./projects">
-      ClassViz
-    </Link>,
-    description: 'Explore interactivelly software architecture visualisations. Understand your software’s structure, dependencies, and hotspots at a glance.',
+    key: 'ClassViz',
+    name: (
+      <Link className="hover:text-red-600" color="foreground" href="./projects">
+        ClassViz
+      </Link>
+    ),
+    description:
+      'Explore interactivelly software architecture visualisations. Understand your software’s structure, dependencies, and hotspots at a glance.'
   },
   {
-    key: "BubbleTea",
-    name: <Link className="hover:text-red-600" color="foreground" href="./projects">
-      BubbleTeaVis
-    </Link>,
-    description: 'Inspect your code base through the lens of a layered software architecture.',
-  },
+    key: 'BubbleTea',
+    name: (
+      <Link className="hover:text-red-600" color="foreground" href="./projects">
+        BubbleTeaVis
+      </Link>
+    ),
+    description:
+      'Inspect your code base through the lens of a layered software architecture.'
+  }
 ];
 
 export default function IndustrialProjectsPage() {
@@ -54,13 +66,22 @@ export default function IndustrialProjectsPage() {
           style={{ width: '100vw', height: 'auto' }}
         />
         <div className="max-w-5xl">
-          <h1 className="text-3xl font-bold text-red-600 mb-4 pt-6">Unlocking Software Insights: Your Path to Better Architecture</h1>
+          <h1 className="text-3xl font-bold text-red-600 mb-4 pt-6">
+            Unlocking Software Insights: Your Path to Better Architecture
+          </h1>
           <p className="text-gray-600 mb-4">
-            Is your company or your team grappling with complex software systems? Struggling to decipher intricate architectures? We are experienced in working on practical challenges, and are activelly collaborating with industrial partners, helping them solve complex issues conserning software analysis and architecture visualization.
+            Is your company or your team grappling with complex software
+            systems? Struggling to decipher intricate architectures? We are
+            experienced in working on practical challenges, and are activelly
+            collaborating with industrial partners, helping them solve complex
+            issues conserning software analysis and architecture visualization.
           </p>
-          <h1 className="text-2xl font-bold text-red-700 mb-4">What We Offer</h1>
+          <h1 className="text-2xl font-bold text-red-700 mb-4">
+            What We Offer
+          </h1>
           <p className="text-gray-600 mb-4">
-            We provide state-of-the-art tools to analyse and visualise your software. Our tools:
+            We provide state-of-the-art tools to analyse and visualise your
+            software. Our tools:
           </p>
           <ul>
             {tools.map((tool) => (
@@ -69,8 +90,7 @@ export default function IndustrialProjectsPage() {
               </li>
             ))}
           </ul>
-          <p className="text-gray-600 mb-4">
-          </p>
+          <p className="text-gray-600 mb-4"></p>
           <h1 className="text-2xl font-bold text-red-700 mb-4">Contact Us</h1>
           <ContactCard
             name="Michel R.V. Chaudron"
@@ -84,4 +104,4 @@ export default function IndustrialProjectsPage() {
       <Footer />
     </div>
   );
-};
+}
