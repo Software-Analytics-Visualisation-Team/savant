@@ -10,7 +10,8 @@ import {
   ANDROMEDA_PLATFORM_TITLE,
   ANDROMEDA_PLATFORM_DESC,
   ANDROMEDA_PLATFORM_USE_DESC,
-  ANDROMEDA_COLLABORATOR_DESC
+  ANDROMEDA_COLLABORATOR_DESC,
+  GALAXY_PROJECT_DESC
 } from '@/app/constants';
 
 const menuItems = [
@@ -41,6 +42,10 @@ export default function Home() {
             What is the Andromeda Platform?
           </h1>
           <p className="text-gray-600 mb-4">{ANDROMEDA_PLATFORM_DESC}</p>
+          <h1 className="text-2xl font-bold text-red-700 mb-4">
+            What is the Galaxy Project?
+          </h1>
+          <p className="text-gray-600 mb-4">{GALAXY_PROJECT_DESC}</p>
           <h1 className="text-2xl font-bold text-red-700 mb-4">
             How can I use the platform?
           </h1>
