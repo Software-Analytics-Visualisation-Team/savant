@@ -4,7 +4,8 @@ import MichelPortrait from '../public/portraits/michel.jpeg';
 import LinaPortrait from '../public/portraits/lina.jpeg';
 import SatrioPortrait from '../public/portraits/satrio.jpeg';
 import FilipPortrait from '../public/portraits/filip.jpeg';
-import SavantLogo from '../public/savant.png';
+import MerelPortrait from '../public/portraits/merel.jpg';
+import FelipePortrait from '../public/portraits/felipe.jpeg';
 import { NextUIProvider } from '@nextui-org/react';
 import PersonCard from './components/PersonCard';
 import Navbar from './components/Navbar';
@@ -70,38 +71,54 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-row flex-wrap gap-2 justify-center font-sans">
+        <div className="justify-center font-sans w-full">
           <div className="text-3xl text-red-600 font-bold w-full flex justify-center">
             Our Team
           </div>
-          <PersonCard
-            name="Michel R.V. Chaudron"
-            position="Full Professor"
-            image={MichelPortrait.src}
-            quote="Research interests: Software Architecture, Software Design, Software Modeling with a special focus on UML, Software Composition and knowledge sharing, use of AI (Artificial Intelligence) for Software Development."
-            personalPage="https://research.tue.nl/en/persons/michel-rv-chaudron"
-          />
-          <PersonCard
-            name="Lina Ochoa Venegas"
-            position="Assistant Professor"
-            image={LinaPortrait.src}
-            quote="I am interested on studying the phenomena behind software evolution, maintenance, and analysis, and providing tools that support related processes."
-            personalPage="https://research.tue.nl/en/persons/lina-ochoa-venegas"
-          />
-          <PersonCard
-            name="Satrio Adi Rukmono"
-            position="PhD Candidate"
-            image={SatrioPortrait.src}
-            quote="Research interests: Application of Large Language Models (LLMs) in the field of Software Architecture, Software Visualisation"
-            personalPage="https://research.tue.nl/en/persons/satrio-rukmono"
-          />
-          <PersonCard
-            name="Filip Zamfirov"
-            position="PhD Candidate"
-            image={FilipPortrait.src}
-            quote="Research interests: Software Architecture Erosion, Software Visualisation, Static & Dynamic Analysis"
-            personalPage="https://research.tue.nl/en/persons/filip-zamfirov"
-          />
+          <div className="flex flex-row flex-wrap gap-2 justify-right p-8">
+            <PersonCard
+              name="Michel R.V. Chaudron"
+              position="Full Professor"
+              image={MichelPortrait.src}
+              quote="Research interests: Software Architecture, Software Design, Software Modeling with a special focus on UML, Software Composition and knowledge sharing, use of AI (Artificial Intelligence) for Software Development."
+              personalPage="https://research.tue.nl/en/persons/michel-rv-chaudron"
+            />
+            <PersonCard
+              name="Lina Ochoa Venegas"
+              position="Assistant Professor"
+              image={LinaPortrait.src}
+              quote="I am interested on studying the phenomena behind software evolution, maintenance, and analysis, and providing tools that support related processes."
+              personalPage="https://research.tue.nl/en/persons/lina-ochoa-venegas"
+            />
+            <PersonCard
+              name="Satrio Adi Rukmono"
+              position="PhD Candidate"
+              image={SatrioPortrait.src}
+              quote="Research interests: Application of Large Language Models (LLMs) in the field of Software Architecture, Software Visualisation"
+              personalPage="https://research.tue.nl/en/persons/satrio-rukmono"
+            />
+            <PersonCard
+              name="Filip Zamfirov"
+              position="PhD Candidate"
+              image={FilipPortrait.src}
+              quote="Research interests: Software Architecture Erosion, Software Visualisation, Static & Dynamic Analysis"
+              personalPage="https://research.tue.nl/en/persons/filip-zamfirov"
+            />
+            <PersonCard
+              name="Merel Veracx"
+              position="PhD Candidate"
+              image={MerelPortrait.src}
+              quote="Research interests: Engineering AI-intensive Systems, IT Architecture, Quality in Software Engineering, Educating HBO ICT students"
+              personalPage="https://www.linkedin.com/in/merel-veracx-a806115/?originalSubdomain=be"
+            />
+            <PersonCard
+              name="Felipe Xavier"
+              position="PhD Candidate"
+              image={FelipePortrait.src}
+              quote="Research interests: Low-Code, Formal Verification"
+              personalPage="https://www.linkedin.com/in/felipe-xavier-040643153/"
+            />
+          </div>
         </div>
       </main>
       <Footer />
