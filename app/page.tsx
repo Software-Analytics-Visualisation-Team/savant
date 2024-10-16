@@ -11,7 +11,8 @@ import PersonCard from './components/PersonCard';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
-const menuItems = [
+export const menuItems = [
+  { name: 'SEiGS 2025', route: './seigs25' },
   { name: 'Industrial Projects', route: './industrial-projects' },
   { name: 'Academic Projects', route: './projects' },
   { name: 'Positions', route: './openings' },
