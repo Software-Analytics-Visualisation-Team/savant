@@ -2,7 +2,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { menuItems } from '../page';
+import { MENU_ITEMS as menuItems } from '../constants';
 
 const jobs = [
   {

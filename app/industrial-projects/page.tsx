@@ -7,7 +7,7 @@ import Image from 'next/image';
 import ContactCard from '../components/ContactCard';
 import IndustryImage from '../../public/industry-image-3.jpg';
 import MichelPortrait from '../../public/portraits/michel.jpeg';
-import { menuItems } from '../page';
+import { MENU_ITEMS as menuItems } from '../constants';
 
 const tools = [
   {

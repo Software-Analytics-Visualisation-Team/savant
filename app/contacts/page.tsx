@@ -4,7 +4,7 @@ import ContactCard from '../components/ContactCard';
 import MichelPortrait from '../../public/portraits/michel.jpeg';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { menuItems } from '../page';
+import { MENU_ITEMS as menuItems } from '../constants';
 
 export default function ContactsPage() {
   return (

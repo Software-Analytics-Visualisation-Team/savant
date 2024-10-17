@@ -14,6 +14,7 @@ import {
 } from '@nextui-org/navbar';
 import { Link } from '@nextui-org/react';
 import SavantLogo from '../../public/savant_brain.jpeg';
+import { MENU_ITEMS as menuItems } from '../constants';
 
 interface NavbarProps {
     menuItems: { name: string; route: string }[];
@@ -22,13 +23,6 @@ interface NavbarProps {
 
 export default function Navbar(props: NavbarProps) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    const menuItems = [
-        { name: 'Industrial Projects', route: './industrial-projects' },
-        { name: 'Academic Projects', route: './projects' },
-        { name: 'Positions', route: './openings' },
-        { name: 'Contact us', route: './contacts' }
-    ];
 
     return (
         <NextUINavbar

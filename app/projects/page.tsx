@@ -26,7 +26,7 @@ import {
   DEDUCTIVE_SAR_STATUS,
   DEDUCTIVE_SAR_TITLE
 } from '../constants';
-import { menuItems } from '../page';
+import { MENU_ITEMS as menuItems } from '../constants';
 
 export default function Home() {
   return (

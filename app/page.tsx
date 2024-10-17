@@ -10,14 +10,7 @@ import { NextUIProvider } from '@nextui-org/react';
 import PersonCard from './components/PersonCard';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-
-export const menuItems = [
-  { name: 'SEiGS 2025', route: './seigs25' },
-  { name: 'Industrial Projects', route: './industrial-projects' },
-  { name: 'Academic Projects', route: './projects' },
-  { name: 'Positions', route: './openings' },
-  { name: 'Contact us', route: './contacts' }
-];
+import { MENU_ITEMS as menuItems } from './constants';
 
 export default function Home() {
   return (
