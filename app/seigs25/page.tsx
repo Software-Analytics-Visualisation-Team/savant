@@ -67,7 +67,7 @@ export default function Seigs25Page() {
 
           </p>
           <p className="text-gray-600 mb-4">
-            All submissions must conform to the IEEE Conference Proceedings Formatting Guidelines (title in 24pt font and full text in 10pt type, LaTeX users must use <code>{'\\'}documentclass[10pt,conference]{IEEEtran}</code> without including the <code>compsoc</code> or <code>compsocconf</code> option).
+            All submissions must conform to the IEEE Conference Proceedings Formatting Guidelines (title in 24pt font and full text in 10pt type, LaTeX users must use <code>{'\\'}documentclass[10pt,conference]{"{IEEEtran}"}</code> without including the <code>compsoc</code> or <code>compsocconf</code> option).
           </p>
         </div>
       </div>
