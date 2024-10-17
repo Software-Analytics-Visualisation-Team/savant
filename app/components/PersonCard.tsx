@@ -11,7 +11,7 @@ interface UserProps {
 
 export default function App(props: UserProps) {
   return (
-    <Card className="max-w-[340px] min-w-[340px]">
+    <Card className="max-w-[340px] min-w-[30%] m-[5px]">
       <CardHeader className="justify-between">
         <div className="flex gap-5">
           <Avatar

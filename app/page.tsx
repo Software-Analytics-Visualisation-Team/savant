@@ -40,11 +40,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center p-6 lg:flex">
-          <div className="text-3xl flex justify-center font-bold text-red-600">
+        <div className="flex flex-col items-center p-6 w-[90%]">
+          <div className="text-3xl flex justify-center font-bold text-red-600 mb-3">
             Our Goal
           </div>
-          <div className="text-xl text-black">
+          <div className="text-xl text-black" style={{textAlign: 'justify'}}>
             In the dynamic landscape of software engineering, we are a group of
             passionate researchers collaborating to push the boundaries of
             knowledge. Our goal is twofold: Software Architecture: Delve into
@@ -65,16 +65,16 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="justify-center font-sans w-full">
-          <div className="text-3xl text-red-600 font-bold w-full flex justify-center">
+        <div className="justify-center font-sans w-[90%]">
+          <div className="text-3xl text-red-600 font-bold w-full flex mb-3 justify-center">
             Our Team
           </div>
-          <div className="flex flex-row flex-wrap gap-2 justify-right p-8">
+          <div className="flex flex-row flex-wrap gap-2 justify-center px-8 pb-8 mx-auto">
             <PersonCard
               name="Michel R.V. Chaudron"
               position="Full Professor"
               image={MichelPortrait.src}
-              quote="Research interests: Software Architecture, Software Design, Software Modeling with a special focus on UML, Software Composition and knowledge sharing, use of AI (Artificial Intelligence) for Software Development."
+              quote="Research interests: Software Architecture, Software Design, Software Modelling with a special focus on UML, Software Composition and knowledge sharing, use of AI (Artificial Intelligence) for Software Development."
               personalPage="https://research.tue.nl/en/persons/michel-rv-chaudron"
             />
             <PersonCard
@@ -109,8 +109,8 @@ export default function Home() {
               name="Felipe Xavier"
               position="PhD Candidate"
               image={FelipePortrait.src}
-              quote="Research interests: Low-Code, Formal Verification"
-              personalPage="https://www.linkedin.com/in/felipe-xavier-040643153/"
+              quote="Research interests: Low-Code, Formal Verification, Embedded Systems, and Software architecture"
+              personalPage="https://research.tue.nl/en/persons/felipe-de-azeredo-coutinho-xavier"
             />
           </div>
         </div>

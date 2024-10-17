@@ -21,8 +21,8 @@ export const ANDROMEDA_PLATFORM_HREF = './projects/galaxy';
 export const ANDROMEDA_PLATFORM_CONTACTS = 'Michel Chaudron, Filip Zamfirov';
 export const ANDROMEDA_PLATFORM_FUNDING = '';
 export const ANDROMEDA_PLATFORM_STATUS = 'Active';
-export const GALAXY_PROJECT_DESC = 
-  'The Galaxy Project is an open-source, web-based platform designed for data-intensive biomedical research. The platform integrates various tools into cohesive workflows, allowing users to perform analyses through a user-friendly web interface. Additionally, it supports data integration, analysis persistence and much more. While the Galaxy project was originally intended for genomics, it is being applyed in a variety of scientific fields, and has a growing international community consisting of 500 000 registered users, many developers, several yearly events and a dedicated conference.';
+export const GALAXY_PROJECT_DESC =
+  'The Galaxy Project is an open-source, web-based platform designed for data-intensive biomedical research. The platform integrates various tools into cohesive workflows, allowing users to perform analyses through a user-friendly web interface. Additionally, it supports data integration, analysis persistence and much more. While the Galaxy project was originally intended for genomics, it is being applied in a variety of scientific fields, and has a growing international community consisting of 500 000 registered users, many developers, several yearly events and a dedicated conference.';
 
 // ClassViz Project info
 export const CLASSVIZ_TITLE = 'ClassViz';

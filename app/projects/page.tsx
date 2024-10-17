@@ -47,7 +47,9 @@ export default function Home() {
             status={DEDUCTIVE_SAR_STATUS}
           />
         </div>
-        <h1 className="text-3xl font-bold text-red-600 mb-4 p-4 pb-0">Tools</h1>
+        <h1 className="text-3xl font-bold text-red-600 mb-4 p-4 pb-0">
+            Tools
+        </h1>
         <div className="z-10 flex flex-row flex-wrap gap-4 justify-center max-w-fit lg:flex pb-12">
           <ProjectCard
             href={ANDROMEDA_PLATFORM_HREF}

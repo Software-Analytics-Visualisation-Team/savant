@@ -50,7 +50,7 @@ export default function IndustrialProjectsPage() {
   return (
     <div>
       <Navbar menuItems={menuItems} pageSelected="" />
-      <div className="flex flex-col items-center justify-center bg-gray-50 min-h-screen">
+      <div className="flex flex-col items-center justify-center bg-gray-50 min-h-screen" style={{textAlign: 'justify'}}>
         <Image
           src={IndustryImage}
           width={0}
@@ -66,9 +66,9 @@ export default function IndustrialProjectsPage() {
           <p className="text-gray-600 mb-4">
             Is your company or your team grappling with complex software
             systems? Struggling to decipher intricate architectures? We are
-            experienced in working on practical challenges, and are activelly
+            experienced in working on practical challenges, and are actively
             collaborating with industrial partners, helping them solve complex
-            issues conserning software analysis and architecture visualization.
+            issues concerning software analysis and architecture visualization.
           </p>
           <h1 className="text-2xl font-bold text-red-700 mb-4">
             What We Offer
@@ -79,7 +79,7 @@ export default function IndustrialProjectsPage() {
           </p>
           <ul>
             {tools.map((tool) => (
-              <li key={tool.key} className="pb-1">
+              <li key={tool.key} className="pb-2">
                 <strong>{tool.name}:</strong> {tool.description}
               </li>
             ))}

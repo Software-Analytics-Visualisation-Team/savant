@@ -11,12 +11,13 @@ const jobs = [
       "Software Intensive Systems must meet rigorous quality and reliability standards while being agile in responding to business stakeholders. Developing such systems faces several challenges: complexity, scale, and legacy evolution. The key approach is architecture, which provides a high-level representation of the system, illustrating how it's hierarchically decomposed into subsystems and how these subsystems interact. The ultimate goal in this project is to create automated tools that maintain consistency between the architecture and the implementation",
     applyLink: 'mailto:m.r.v.chaudron@tue.nl?subject=COMARIC (PhD Position)'
   },
-  {
-    name: 'Cynergy4me (PhD Position)',
-    description:
-      "The use of Low Code-approaches has proven very successful in developing business automation software. We believe the success of Low Code is the well engineered alignment of Low Code = DSL + MBSE + Reference Architecture + CI/CD. We are looking for a candidate that can develop a method and tool for showing the feasibility of low-code for embedded system - so practical knowledge of DSL's & MBSE, Code Generation and good understanding of Software Architecture.oin our team as a product manager and drive innovation.",
-    applyLink: 'mailto:m.r.v.chaudron@tue.nl?subject=Cynergy4me (PhD Position)'
-  },
+  // TODO (felaze): This should move to the academic projects at some point
+  // {
+  //   name: 'Cynergy4me (PhD Position)',
+  //   description:
+  //     "The use of Low Code-approaches has proven very successful in developing business automation software. We believe the success of Low Code is the well engineered alignment of Low Code = DSL + MBSE + Reference Architecture + CI/CD. We are looking for a candidate that can develop a method and tool for showing the feasibility of low-code for embedded system - so practical knowledge of DSL's & MBSE, Code Generation and good understanding of Software Architecture.oin our team as a product manager and drive innovation.",
+  //   applyLink: 'mailto:m.r.v.chaudron@tue.nl?subject=Cynergy4me (PhD Position)'
+  // },
   {
     name: 'Software Analytics Infrastructure (PhD Position) ',
     description:
@@ -37,7 +38,7 @@ export default function JobsPage() {
           {jobs.map((job, index) => (
             <li key={index} className="bg-white p-4 rounded shadow">
               <h2 className="text-lg font-semibold">{job.name}</h2>
-              <p className="text-gray-600">{job.description}</p>
+              <p className="text-gray-600" style={{textAlign: 'justify'}}>{job.description}</p>
               <a
                 href={job.applyLink}
                 target="_blank"

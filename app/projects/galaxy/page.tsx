@@ -15,6 +15,7 @@ import {
 } from '@/app/constants';
 
 const menuItems = [
+  { name: 'SEiGS 2025', route: '../seigs25' },
   { name: 'Industrial Projects', route: '../industrial-projects' },
   { name: 'Academic Projects', route: '../projects' },
   { name: 'Positions', route: '../openings' },
@@ -26,7 +27,7 @@ export default function Home() {
     <div>
       <Navbar menuItems={menuItems} pageSelected="" />
 
-      <div className="flex flex-col items-center justify-center bg-gray-50 min-h-screen">
+      <div className="flex flex-col items-center justify-center bg-gray-50 min-h-screen" style={{textAlign: 'justify'}}>
         <div className="max-w-5xl">
           <h1 className="text-3xl font-bold text-red-600 mb-4 pt-4">
             {ANDROMEDA_PLATFORM_TITLE}
