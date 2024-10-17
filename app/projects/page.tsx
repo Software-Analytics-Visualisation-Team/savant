@@ -26,13 +26,7 @@ import {
   DEDUCTIVE_SAR_STATUS,
   DEDUCTIVE_SAR_TITLE
 } from '../constants';
-
-const menuItems = [
-  { name: 'Industrial Projects', route: './industrial-projects' },
-  { name: 'Academic Projects', route: './projects' },
-  { name: 'Positions', route: './openings' },
-  { name: 'Contact us', route: './contacts' }
-];
+import { menuItems } from '../page';
 
 export default function Home() {
   return (

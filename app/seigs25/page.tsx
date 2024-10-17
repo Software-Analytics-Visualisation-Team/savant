@@ -37,9 +37,9 @@ export default function Seigs25Page() {
             The event provides a platform for exchanging ideas for:
           </p>
           <ul>
-            <li>Academic research in Software Engineering (any topic fitting the ICSE list of topics),</li>
-            <li>The role of software engineering in socio-economic development of the continent, the future directions of software engineering research and education,</li>
-            <li>Creating networks with the global software engineering community, and sharing exciting results with the global community.</li>
+            <li className="pb-1">Academic research in Software Engineering (any topic fitting the ICSE list of topics),</li>
+            <li className="pb-1">The role of software engineering in socio-economic development of the continent, the future directions of software engineering research and education,</li>
+            <li className="pb-1">Creating networks with the global software engineering community, and sharing exciting results with the global community.</li>
           </ul>
           <h2 className="text-2xl font-bold text-red-700 mb-4">
             Submission Guidelines and Evaluation
@@ -51,8 +51,8 @@ export default function Seigs25Page() {
             The following paper categories are welcome:
           </p>
           <ul>
-            <li>Full technical papers limited to 8 pages describing technical research results or industrial experience.</li>
-            <li>Short papers (Posters) limited to 4 pages describing preliminary results of work-in-progress research.</li>
+            <li className="pb-1">Full technical papers limited to 8 pages describing technical research results or industrial experience.</li>
+            <li className="pb-1">Short papers (Posters) limited to 4 pages describing preliminary results of work-in-progress research.</li>
           </ul>
           <p className="text-gray-600 mb-4">
             All submissions will be rigorously peer-reviewed by members of SEiGS Program Committee. Submissions must be original and not have been previously published or currently under review elsewhere. Submissions will be evaluated based on the scientific quality, relevance for the African continent as well as global software engineering community, significance, and quality of presentation.

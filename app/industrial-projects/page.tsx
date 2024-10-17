@@ -7,13 +7,7 @@ import Image from 'next/image';
 import ContactCard from '../components/ContactCard';
 import IndustryImage from '../../public/industry-image-3.jpg';
 import MichelPortrait from '../../public/portraits/michel.jpeg';
-
-const menuItems = [
-  { name: 'Industrial Projects', route: './industrial-projects' },
-  { name: 'Academic Projects', route: './projects' },
-  { name: 'Positions', route: './openings' },
-  { name: 'Contact us', route: './contacts' }
-];
+import { menuItems } from '../page';
 
 const tools = [
   {

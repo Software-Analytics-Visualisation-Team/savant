@@ -2,13 +2,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-
-const menuItems = [
-  { name: 'Industrial Projects', route: './industrial-projects' },
-  { name: 'Academic Projects', route: './projects' },
-  { name: 'Positions', route: './openings' },
-  { name: 'Contact us', route: './contacts' }
-];
+import { menuItems } from '../page';
 
 const jobs = [
   {

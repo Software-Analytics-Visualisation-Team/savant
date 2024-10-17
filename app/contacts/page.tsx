@@ -4,13 +4,7 @@ import ContactCard from '../components/ContactCard';
 import MichelPortrait from '../../public/portraits/michel.jpeg';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-
-const menuItems = [
-  { name: 'Industrial Projects', route: './industrial-projects' },
-  { name: 'Academic Projects', route: './projects' },
-  { name: 'Positions', route: './openings' },
-  { name: 'Contact us', route: './contacts' }
-];
+import { menuItems } from '../page';
 
 export default function ContactsPage() {
   return (
