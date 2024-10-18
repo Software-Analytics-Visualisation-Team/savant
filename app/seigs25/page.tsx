@@ -33,7 +33,7 @@ export default function Seigs25Page() {
           <p className="text-gray-600 mb-4">
             The event provides a platform for exchanging ideas on:
           </p>
-          <ul className="space-y-4 mt-4 mb-4">
+          <ul className="space-y-2 mt-2 mb-4">
             <li className="bg-white p-4 rounded shadow">
               <p className="text-gray-600">
                 Academic research in Software Engineering (any topic fitting the ICSE list of topics),
@@ -56,16 +56,13 @@ export default function Seigs25Page() {
           <p className="text-gray-600 mb-4">
             For a limited number of papers, sponsorship for traveling to and registration for ICSE will be available.
           </p>
-          <h2 className="text-2xl font-bold text-red-700 mb-4">
+          <h2 className="text-xl font-bold text-red-700 mb-4 mt-8">
             Submission Guidelines and Evaluation
           </h2>
           <p className="text-gray-600 mb-4">
-            All papers must be original and not simultaneously submitted to another journal or conference.
+            All papers must be original and not simultaneously submitted to another journal or conference. The following paper categories are welcome:
           </p>
-          <p className="text-gray-600 mb-4">
-            The following paper categories are welcome:
-          </p>
-          <ul className="space-y-4 mt-4 mb-4">
+          <ul className="space-y-2 mt-2 mb-4">
             <li className="bg-white p-4 rounded shadow">
               <p className="text-gray-600">
                 <b>Full technical papers</b>, limited to 8 pages, describing technical research results or industrial experience.
@@ -83,7 +80,7 @@ export default function Seigs25Page() {
           <p className="text-gray-600 mb-4">
             The page limit includes all text, figures, tables, and references. All submissions must represent unpublished original work and not be under review elsewhere. Papers will be judged based on their clarity, relevance, originality, and applicability in practice.
           </p>
-          <h2 className="text-xl font-bold text-red-700 mb-4 mt-8">
+          <h2 className="text-xl font-bold text-red-700 mb-2 mt-8">
             Formatting and Submission Links
           </h2>
           <p className="text-gray-600 mb-4">
@@ -92,7 +89,7 @@ export default function Seigs25Page() {
           <p className="text-gray-600 mb-4">
             All submissions must conform to the IEEE Conference Proceedings Formatting Guidelines (title in 24pt font and full text in 10pt type, LaTeX users must use <code>{'\\'}documentclass[10pt,conference]{"{IEEEtran}"}</code> without including the <code>compsoc</code> or <code>compsocconf</code> option).
           </p>
-          <h2 className="text-xl font-bold text-red-700 mb-4 mt-8">
+          <h2 className="text-xl font-bold text-red-700 mb-2 mt-8">
             List of Topics
           </h2>
           <p className="text-gray-600 mb-4">
@@ -136,7 +133,7 @@ export default function Seigs25Page() {
               </p>
             </li>
           </ul>
-          <h2 className="text-xl font-bold text-red-700 mb-4 mt-8">
+          <h2 className="text-xl font-bold text-red-700 mb-2 mt-8">
             Program Committee (to be extended)
           </h2>
           <p className="text-gray-600 mb-4">
@@ -151,21 +148,21 @@ export default function Seigs25Page() {
             Chitsutha Soomlek (KKU, Thailand)<br />
             Agung Dewandaru (ITB, Bandung, Indonesia)
           </p>
-          <h2 className="text-xl font-bold text-red-700 mb-4 mt-8">
+          <h2 className="text-xl font-bold text-red-700 mb-2 mt-8">
             Organizing Committee
           </h2>
           <p className="text-gray-600 mb-4">
             Michel R.V. Chaudron (TU Eindhoven, The Netherlands)<br />
             Engineer Bainomugisha (Makerere University, Uganda)
           </p>
-          <h2 className="text-xl font-bold text-red-700 mb-4 mt-8">
+          <h2 className="text-xl font-bold text-red-700 mb-2 mt-8">
             Publication
           </h2>
           <p className="text-gray-600 mb-4">
             Accepted papers will be published in the electronic ICSE 2025 Proceedings in the IEEE Digital Library.
             Authors of accepted papers are required to register for the symposium and attend the symposium in order to have the paper included in the proceedings. The official publication date of the symposium proceedings is the date the proceedings are made available by IEEE.
           </p>
-          <h2 className="text-xl font-bold text-red-700 mb-4 mt-8">
+          <h2 className="text-xl font-bold text-red-700 mb-2 mt-8">
             Venue
           </h2>
           <p className="text-gray-600 mb-4">
