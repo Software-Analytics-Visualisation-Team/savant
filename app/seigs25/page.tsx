@@ -19,13 +19,13 @@ export default function Seigs25Page() {
         /> */}
         <div className="max-w-5xl">
           <h1 className="text-3xl font-bold text-red-600 mb-4 pt-6">
-            IEEE SEiGS 2025: Symposium on Software Engineering in the Global South
+            IEEE SEiGS 2025:<br />Symposium on Software Engineering in the Global South
           </h1>
           <p className="text-lg font-bold text-red-700 mb-4">
             Co-located with ICSE 2025, Ottawa, Canada
           </p>
           <p className="text-gray-600 mb-4">
-            Submission link: TBD
+            Submission link: <a className="text-red-600 hover:underline">TBD</a>
           </p>
           <p className="text-gray-600 mb-4">
             The Symposium on Software Engineering in the Global South (SEiGS) is a forum for researchers, innovators, and leading professionals to discuss the current state and future of software engineering in low-resource countries. SEiGS 2025 is organized to increase the participation of researchers from the Global South in the international Software Engineering community.
@@ -33,7 +33,7 @@ export default function Seigs25Page() {
           <p className="text-gray-600 mb-4">
             The event provides a platform for exchanging ideas on:
           </p>
-          <ul className="list-outside pl-8 list-disc text-gray-600 mt-0 mb-4">
+          <ul className="list-outside pl-4 list-disc text-gray-600 mt-0 mb-4">
             <li>
                 Academic research in Software Engineering (any topic fitting the ICSE list of topics),
             </li>
@@ -83,6 +83,12 @@ export default function Seigs25Page() {
           <p className="text-gray-600 mb-4 bg-white p-4 rounded shadow">
             All submissions must conform to the IEEE Conference Proceedings Formatting Guidelines (title in 24pt font and full text in 10pt type, LaTeX users must use <code>{'\\'}documentclass[10pt,conference]{"{IEEEtran}"}</code> without including the <code>compsoc</code> or <code>compsocconf</code> option).
           </p>
+          <p className="text-gray-600 mb-4">
+            Manuscripts must be submitted in PDF format via EasyChair: 
+          </p>
+          <p className="text-gray-600 mb-4 bg-white p-4 rounded shadow">
+            <a className="text-red-600 hover:underline">TBD</a>
+          </p>
           <h2 className="text-xl font-bold text-red-700 mb-0 mt-8">
             List of Topics
           </h2>
@@ -94,7 +100,7 @@ export default function Seigs25Page() {
               <h3 className="text-lg font-semibold">
                 Applications in
               </h3>
-              <ul className="list-outside pl-8 list-disc text-gray-600 mt-0 mb-4">
+              <ul className="list-outside pl-4 list-disc text-gray-600 mt-0 mb-4">
                 <li>Financial Services</li>
                 <li>Agriculture</li>
                 <li>Sustainable Cities</li>
@@ -118,7 +124,7 @@ export default function Seigs25Page() {
               <h3 className="text-lg font-semibold">
                 Community and Outreach
               </h3>
-              <ul className="list-outside pl-8 list-disc text-gray-600 mt-0 mb-4">
+              <ul className="list-outside pl-4 list-disc text-gray-600 mt-0 mb-4">
                 <li>Building Research Networks</li>
                 <li>Software Innovations and Startups</li>
                 <li>Growing the IT-Industry</li>
