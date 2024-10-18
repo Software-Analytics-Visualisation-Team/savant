@@ -33,7 +33,7 @@ export default function Seigs25Page() {
           <p className="text-gray-600 mb-4">
             The event provides a platform for exchanging ideas on:
           </p>
-          <ul>
+          <ul className="space-y-4">
             <li className="bg-white p-8 rounded shadow">
               <p className="text-gray-600">
                 Academic research in Software Engineering (any topic fitting the ICSE list of topics),
@@ -65,7 +65,7 @@ export default function Seigs25Page() {
           <p className="text-gray-600 mb-4">
             The following paper categories are welcome:
           </p>
-          <ul>
+          <ul className="space-y-4">
             <li className="bg-white p-8 rounded shadow">
               <p className="text-gray-600">
                 <b>Full technical papers</b>, limited to 8 pages, describing technical research results or industrial experience.
@@ -98,36 +98,20 @@ export default function Seigs25Page() {
           <p className="text-gray-600 mb-4">
             We are seeking high quality papers from researchers, professionals, and innovators on but not limited to the following topics:
           </p>
-          <ul>
+          <ul className="space-y-4">
             <li className="bg-white p-8 rounded shadow">
               <h3 className="text-lg font-semibold">
                 Applications in
               </h3>
               <p className="text-gray-600">
-                Financial Services
-              </p>
-              <p className="text-gray-600">
-                Agriculture
-              </p>
-              <p className="text-gray-600">
-                Sustainable Cities
-              </p>
-              <p className="text-gray-600">
-                Healthcare
-              </p>
-              <p className="text-gray-600">
-                Education
-              </p>
-              <p className="text-gray-600">
-                Transportation
-              </p>
-              <p className="text-gray-600">
-                Environment and Climate Change
-              </p>
-              <p className="text-gray-600">
-                Energy (e.g., smart grids)
-              </p>
-              <p className="text-gray-600">
+                Financial Services<br />
+                Agriculture<br />
+                Sustainable Cities<br />
+                Healthcare<br />
+                Education<br />
+                Transportation<br />
+                Environment and Climate Change<br />
+                Energy (e.g., smart grids)<br />
                 Conflict and Crisis Management
               </p>
             </li>
@@ -144,22 +128,29 @@ export default function Seigs25Page() {
                 Community and Outreach
               </h3>
               <p className="text-gray-600">
-                Building Research Networks
-              </p>
-              <p className="text-gray-600">
-                Software Innovations and Startups
-              </p>
-              <p className="text-gray-600">
-                Growing the IT-Industry
-              </p>
-              <p className="text-gray-600">
-                Setting up IT-Outsourcing
-              </p>
-              <p className="text-gray-600">
+                Building Research Networks<br />
+                Software Innovations and Startups<br />
+                Growing the IT-Industry<br />
+                Setting up IT-Outsourcing<br />
                 National Policies for Growing the IT Industry
               </p>
             </li>
           </ul>
+          <h2 className="text-2xl font-bold text-red-700 mb-4">
+            Program Committee (to be extended)
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Ibrahim Adeyanju (Federal University Oye-Ekiti, Nigeria)<br />
+            Yirsaw Ayalew (University of Botswana, Botswana)<br />
+            Joseph K Balikuddembe (Makerere University, Uganda)<br />
+            Djamel E. Khelladi (IRISA, Rennes, France)<br />
+            Foutse Khomh (DGIGL, École Polytechnique de Montréal, Canada)<br />
+            Tegawendé F. Bissyandé (SnT, University of Luxembourg, Luxembourg)<br />
+            Joyce Nakatumba (Makerere University, Uganda)<br />
+            Serge Stinckwich (IRD, France)<br />
+            Chitsutha Soomlek (KKU, Thailand)<br />
+            Agung Dewandaru (ITB, Bandung, Indonesia)
+          </p>
         </div>
       </div>
       <Footer />
