@@ -25,7 +25,7 @@ export default function Seigs25Page() {
             Co-located with ICSE 2025, Ottawa, Canada
           </p>
           <p className="text-gray-600 mb-4">
-            Submission link: <a className="text-red-600 hover:underline">TBD</a>
+            Submission link: <a href="https://easychair.org/conferences/?conf=seigs2025" className="text-red-600 hover:underline">https://easychair.org/conferences/?conf=seigs2025</a>
           </p>
           <p className="text-gray-600 mb-4">
             The Symposium on Software Engineering in the Global South (SEiGS) is a forum for researchers, innovators, and leading professionals to discuss the current state and future of software engineering in low-resource countries. SEiGS 2025 is organized to increase the participation of researchers from the Global South in the international Software Engineering community.
@@ -87,7 +87,7 @@ export default function Seigs25Page() {
             Manuscripts must be submitted in PDF format via EasyChair: 
           </p>
           <p className="text-gray-600 mb-4 bg-white p-4 rounded shadow">
-            <a className="text-red-600 hover:underline">TBD</a>
+            <a href="https://easychair.org/conferences/?conf=seigs2025" className="text-red-600 hover:underline">https://easychair.org/conferences/?conf=seigs2025</a>
           </p>
           <h2 className="text-xl font-bold text-red-700 mb-0 mt-8">
             List of Topics
