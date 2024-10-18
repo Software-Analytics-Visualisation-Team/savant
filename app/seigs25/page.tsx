@@ -33,18 +33,18 @@ export default function Seigs25Page() {
           <p className="text-gray-600 mb-4">
             The event provides a platform for exchanging ideas on:
           </p>
-          <ul className="space-y-4">
-            <li className="bg-white p-8 rounded shadow">
+          <ul className="space-y-4 mt-4 mb-4">
+            <li className="bg-white p-4 rounded shadow">
               <p className="text-gray-600">
                 Academic research in Software Engineering (any topic fitting the ICSE list of topics),
               </p>
             </li>
-            <li className="bg-white p-8 rounded shadow">
+            <li className="bg-white p-4 rounded shadow">
               <p className="text-gray-600">
                 The role of software engineering in the socio-economic development in the Global South, as well as future directions for software engineering research and education,
               </p>
             </li>
-            <li className="bg-white p-8 rounded shadow">
+            <li className="bg-white p-4 rounded shadow">
               <p className="text-gray-600">
                 Creating networks with the global Software Engineering community and sharing exciting results with the community.
               </p>
@@ -65,13 +65,13 @@ export default function Seigs25Page() {
           <p className="text-gray-600 mb-4">
             The following paper categories are welcome:
           </p>
-          <ul className="space-y-4">
-            <li className="bg-white p-8 rounded shadow">
+          <ul className="space-y-4 mt-4 mb-4">
+            <li className="bg-white p-4 rounded shadow">
               <p className="text-gray-600">
                 <b>Full technical papers</b>, limited to 8 pages, describing technical research results or industrial experience.
               </p>
             </li>
-            <li className="bg-white p-8 rounded shadow">
+            <li className="bg-white p-4 rounded shadow">
               <p className="text-gray-600">
                 <b>Short papers</b> (posters), limited to 4 pages, describing preliminary results of work-in-progress research.
               </p>
@@ -98,8 +98,8 @@ export default function Seigs25Page() {
           <p className="text-gray-600 mb-4">
             We are seeking high quality papers from researchers, professionals, and innovators on but not limited to the following topics:
           </p>
-          <ul className="space-y-4 flex flex-row gap-4 items-stretch place-items-stretch">
-            <li className="basis-1/3 bg-white p-8 rounded shadow">
+          <ul className="flex flex-row gap-4 items-stretch place-items-stretch">
+            <li className="basis-1/3 bg-white p-4 rounded shadow">
               <h3 className="text-lg font-semibold">
                 Applications in
               </h3>
@@ -115,7 +115,7 @@ export default function Seigs25Page() {
                 Conflict and Crisis Management
               </p>
             </li>
-            <li className="basis-1/3 bg-white p-8 rounded shadow">
+            <li className="basis-1/3 bg-white p-4 rounded shadow">
               <h3 className="text-lg font-semibold">
                 Software Engineering
               </h3>
@@ -123,7 +123,7 @@ export default function Seigs25Page() {
                 The same scope as the main ICSE call-for-paper (all tracks of the main conference).
               </p>
             </li>
-            <li className="basis-1/3 bg-white p-8 rounded shadow">
+            <li className="basis-1/3 bg-white p-4 rounded shadow">
               <h3 className="text-lg font-semibold">
                 Community and Outreach
               </h3>
