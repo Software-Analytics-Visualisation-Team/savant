@@ -151,6 +151,26 @@ export default function Seigs25Page() {
             Chitsutha Soomlek (KKU, Thailand)<br />
             Agung Dewandaru (ITB, Bandung, Indonesia)
           </p>
+          <h2 className="text-2xl font-bold text-red-700 mb-4">
+            Organizing Committee
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Michel R.V. Chaudron (TU Eindhoven, The Netherlands)<br />
+            Engineer Bainomugisha (Makerere University, Uganda)
+          </p>
+          <h2 className="text-2xl font-bold text-red-700 mb-4">
+            Publication
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Accepted papers will be published in the electronic ICSE 2025 Proceedings in the IEEE Digital Library.
+            Authors of accepted papers are required to register for the symposium and attend the symposium in order to have the paper included in the proceedings. The official publication date of the symposium proceedings is the date the proceedings are made available by IEEE.
+          </p>
+          <h2 className="text-2xl font-bold text-red-700 mb-4">
+            Venue
+          </h2>
+          <p className="text-gray-600 mb-4">
+            The symposium will be co-located with ICSE 2025 to be held in Ottawa, Ontario, Canada
+          </p>
         </div>
       </div>
       <Footer />
