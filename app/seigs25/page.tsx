@@ -98,8 +98,8 @@ export default function Seigs25Page() {
           <p className="text-gray-600 mb-4">
             We are seeking high quality papers from researchers, professionals, and innovators on but not limited to the following topics:
           </p>
-          <ul className="space-y-4 columns-3">
-            <li className="w-full bg-white p-8 rounded shadow">
+          <ul className="space-y-4 flex flex-row">
+            <li className="basis-1/3 bg-white p-8 rounded shadow">
               <h3 className="text-lg font-semibold">
                 Applications in
               </h3>
@@ -115,7 +115,7 @@ export default function Seigs25Page() {
                 Conflict and Crisis Management
               </p>
             </li>
-            <li className="w-full bg-white p-8 rounded shadow">
+            <li className="basis-1/3 bg-white p-8 rounded shadow">
               <h3 className="text-lg font-semibold">
                 Software Engineering
               </h3>
@@ -123,7 +123,7 @@ export default function Seigs25Page() {
                 The same scope as the main ICSE call-for-paper (all tracks of the main conference).
               </p>
             </li>
-            <li className="w-full bg-white p-8 rounded shadow">
+            <li className="basis-1/3 bg-white p-8 rounded shadow">
               <h3 className="text-lg font-semibold">
                 Community and Outreach
               </h3>
