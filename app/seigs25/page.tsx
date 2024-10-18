@@ -21,7 +21,7 @@ export default function Seigs25Page() {
           <h1 className="text-3xl font-bold text-red-600 mb-4 pt-6">
             IEEE SEiGS 2025: Symposium on Software Engineering in the Global South
           </h1>
-          <p className="text-1xl font-bold text-red-700 mb-4">
+          <p className="text-lg font-bold text-red-700 mb-4">
             Co-located with ICSE 2025, Ottawa, Canada
           </p>
           <p className="text-gray-600 mb-4">
@@ -33,23 +33,23 @@ export default function Seigs25Page() {
           <p className="text-gray-600 mb-4">
             The event provides a platform for exchanging ideas on:
           </p>
-          <ul className="space-y-4">
-            <li className="bg-white p-8 rounded shadow">
+          <div className="z-10 flex flex-row flex-wrap gap-4 justify-center max-w-fit lg:flex pb-12">
+            <div className="bg-white p-4 rounded shadow">
               <p className="text-gray-600">
                 Academic research in Software Engineering (any topic fitting the ICSE list of topics),
               </p>
-            </li>
-            <li className="bg-white p-8 rounded shadow">
+            </div>
+            <div className="bg-white p-4 rounded shadow">
               <p className="text-gray-600">
                 The role of software engineering in the socio-economic development in the Global South, as well as future directions for software engineering research and education,
               </p>
-            </li>
-            <li className="bg-white p-8 rounded shadow">
+            </div>
+            <div className="bg-white p-4 rounded shadow">
               <p className="text-gray-600">
                 Creating networks with the global Software Engineering community and sharing exciting results with the community.
               </p>
-            </li>
-          </ul>
+            </div>
+          </div>
           <h2 className="text-2xl font-bold text-red-700 mb-4">
             Sponsorship for Attending
           </h2>
