@@ -33,7 +33,7 @@ export default function Seigs25Page() {
           <p className="text-gray-600 mb-4">
             The event provides a platform for exchanging ideas on:
           </p>
-          <ul className="list-outside list-disc text-gray-600 mt-0 mb-4">
+          <ul className="list-disc text-gray-600 mt-0 mb-4">
             <li>
                 Academic research in Software Engineering (any topic fitting the ICSE list of topics),
             </li>
@@ -94,7 +94,7 @@ export default function Seigs25Page() {
               <h3 className="text-lg font-semibold">
                 Applications in
               </h3>
-              <ul className="list-outside list-disc text-gray-600 mt-0 mb-4">
+              <ul className="list-disc text-gray-600 mt-0 mb-4">
                 <li>Financial Services</li>
                 <li>Agriculture</li>
                 <li>Sustainable Cities</li>
@@ -118,7 +118,7 @@ export default function Seigs25Page() {
               <h3 className="text-lg font-semibold">
                 Community and Outreach
               </h3>
-              <ul className="list-outside list-disc text-gray-600 mt-0 mb-4">
+              <ul className="list-disc text-gray-600 mt-0 mb-4">
                 <li>Building Research Networks</li>
                 <li>Software Innovations and Startups</li>
                 <li>Growing the IT-Industry</li>
@@ -130,25 +130,25 @@ export default function Seigs25Page() {
           <h2 className="text-xl font-bold text-red-700 mb-0 mt-8">
             Program Committee (to be extended)
           </h2>
-          <p className="text-gray-600 mb-4">
-            Ibrahim Adeyanju (Federal University Oye-Ekiti, Nigeria)<br />
-            Yirsaw Ayalew (University of Botswana, Botswana)<br />
-            Joseph K Balikuddembe (Makerere University, Uganda)<br />
-            Djamel E. Khelladi (IRISA, Rennes, France)<br />
-            Foutse Khomh (DGIGL, École Polytechnique de Montréal, Canada)<br />
-            Tegawendé F. Bissyandé (SnT, University of Luxembourg, Luxembourg)<br />
-            Joyce Nakatumba (Makerere University, Uganda)<br />
-            Serge Stinckwich (IRD, France)<br />
-            Chitsutha Soomlek (KKU, Thailand)<br />
-            Agung Dewandaru (ITB, Bandung, Indonesia)
-          </p>
+          <ul className="list-none text-gray-600 mt-0 mb-4">
+            <li>Ibrahim Adeyanju (Federal University Oye-Ekiti, Nigeria)</li>
+            <li>Yirsaw Ayalew (University of Botswana, Botswana)</li>
+            <li>Joseph K Balikuddembe (Makerere University, Uganda)</li>
+            <li>Djamel E. Khelladi (IRISA, Rennes, France)</li>
+            <li>Foutse Khomh (DGIGL, École Polytechnique de Montréal, Canada)</li>
+            <li>Tegawendé F. Bissyandé (SnT, University of Luxembourg, Luxembourg)</li>
+            <li>Joyce Nakatumba (Makerere University, Uganda)</li>
+            <li>Serge Stinckwich (IRD, France)</li>
+            <li>Chitsutha Soomlek (KKU, Thailand)</li>
+            <li>Agung Dewandaru (ITB, Bandung, Indonesia)</li>
+          </ul>
           <h2 className="text-xl font-bold text-red-700 mb-0 mt-8">
             Organizing Committee
           </h2>
-          <p className="text-gray-600 mb-4">
-            Michel R.V. Chaudron (TU Eindhoven, The Netherlands)<br />
-            Engineer Bainomugisha (Makerere University, Uganda)
-          </p>
+          <ul className="list-none text-gray-600 mt-0 mb-4">
+            <li>Michel R.V. Chaudron (TU Eindhoven, The Netherlands)</li>
+            <li>Engineer Bainomugisha (Makerere University, Uganda)</li>
+          </ul>
           <h2 className="text-xl font-bold text-red-700 mb-0 mt-8">
             Publication
           </h2>
