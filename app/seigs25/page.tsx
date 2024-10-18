@@ -35,17 +35,17 @@ export default function Seigs25Page() {
           </p>
           <ul>
             <li className="bg-white p-8 rounded shadow">
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600">
                 Academic research in Software Engineering (any topic fitting the ICSE list of topics),
               </p>
             </li>
             <li className="bg-white p-8 rounded shadow">
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600">
                 The role of software engineering in the socio-economic development in the Global South, as well as future directions for software engineering research and education,
               </p>
             </li>
             <li className="bg-white p-8 rounded shadow">
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600">
                 Creating networks with the global Software Engineering community and sharing exciting results with the community.
               </p>
             </li>
@@ -67,12 +67,12 @@ export default function Seigs25Page() {
           </p>
           <ul>
             <li className="bg-white p-8 rounded shadow">
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600">
                 <b>Full technical papers</b>, limited to 8 pages, describing technical research results or industrial experience.
               </p>
             </li>
             <li className="bg-white p-8 rounded shadow">
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600">
                 <b>Short papers</b> (posters), limited to 4 pages, describing preliminary results of work-in-progress research.
               </p>
             </li>
@@ -100,62 +100,62 @@ export default function Seigs25Page() {
           </p>
           <ul>
             <li className="bg-white p-8 rounded shadow">
-              <h3 className="text-1xl font-bold text-red-700 mb-4">
+              <h3 className="text-lg font-semibold">
                 Applications in
               </h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600">
                 Financial Services
               </p>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600">
                 Agriculture
               </p>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600">
                 Sustainable Cities
               </p>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600">
                 Healthcare
               </p>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600">
                 Education
               </p>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600">
                 Transportation
               </p>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600">
                 Environment and Climate Change
               </p>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600">
                 Energy (e.g., smart grids)
               </p>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600">
                 Conflict and Crisis Management
               </p>
             </li>
             <li className="bg-white p-8 rounded shadow">
-              <h3 className="text-1xl font-bold text-red-700 mb-4">
+              <h3 className="text-lg font-semibold">
                 Software Engineering
               </h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600">
                 The same scope as the main ICSE call-for-paper (all tracks of the main conference).
               </p>
             </li>
             <li className="bg-white p-8 rounded shadow">
-              <h3 className="text-1xl font-bold text-red-700 mb-4">
+              <h3 className="text-lg font-semibold">
                 Community and Outreach
               </h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600">
                 Building Research Networks
               </p>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600">
                 Software Innovations and Startups
               </p>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600">
                 Growing the IT-Industry
               </p>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600">
                 Setting up IT-Outsourcing
               </p>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600">
                 National Policies for Growing the IT Industry
               </p>
             </li>
