@@ -98,7 +98,7 @@ export default function Seigs25Page() {
           <p className="text-gray-600 mb-4">
             We are seeking high quality papers from researchers, professionals, and innovators on but not limited to the following topics:
           </p>
-          <ul className="space-y-4 flex flex-row">
+          <ul className="space-y-4 flex flex-row gap-4 items-stretch place-items-stretch">
             <li className="basis-1/3 bg-white p-8 rounded shadow">
               <h3 className="text-lg font-semibold">
                 Applications in
