@@ -33,36 +33,30 @@ export default function Seigs25Page() {
           <p className="text-gray-600 mb-4">
             The event provides a platform for exchanging ideas on:
           </p>
-          <ul className="space-y-2 mt-2 mb-4">
-            <li className="bg-white p-4 rounded shadow">
-              <p className="text-gray-600">
+          <ul className="list-outside list-disc text-gray-600 mt-0 mb-4">
+            <li>
                 Academic research in Software Engineering (any topic fitting the ICSE list of topics),
-              </p>
             </li>
-            <li className="bg-white p-4 rounded shadow">
-              <p className="text-gray-600">
+            <li>
                 The role of software engineering in the socio-economic development in the Global South, as well as future directions for software engineering research and education,
-              </p>
             </li>
-            <li className="bg-white p-4 rounded shadow">
-              <p className="text-gray-600">
+            <li>
                 Creating networks with the global Software Engineering community and sharing exciting results with the community.
-              </p>
             </li>
           </ul>
-          <h2 className="text-xl font-bold text-red-700 mb-4 mt-8">
+          <h2 className="text-xl font-bold text-red-700 mb-0 mt-8">
             Sponsorship for Attending
           </h2>
           <p className="text-gray-600 mb-4">
             For a limited number of papers, sponsorship for traveling to and registration for ICSE will be available.
           </p>
-          <h2 className="text-xl font-bold text-red-700 mb-4 mt-8">
+          <h2 className="text-xl font-bold text-red-700 mb-0 mt-8">
             Submission Guidelines and Evaluation
           </h2>
           <p className="text-gray-600 mb-4">
             All papers must be original and not simultaneously submitted to another journal or conference. The following paper categories are welcome:
           </p>
-          <ul className="space-y-2 mt-2 mb-4">
+          <ul className="space-y-2 mt-0 mb-4">
             <li className="bg-white p-4 rounded shadow">
               <p className="text-gray-600">
                 <b>Full technical papers</b>, limited to 8 pages, describing technical research results or industrial experience.
@@ -80,7 +74,7 @@ export default function Seigs25Page() {
           <p className="text-gray-600 mb-4">
             The page limit includes all text, figures, tables, and references. All submissions must represent unpublished original work and not be under review elsewhere. Papers will be judged based on their clarity, relevance, originality, and applicability in practice.
           </p>
-          <h2 className="text-xl font-bold text-red-700 mb-2 mt-8">
+          <h2 className="text-xl font-bold text-red-700 mb-0 mt-8">
             Formatting and Submission Links
           </h2>
           <p className="text-gray-600 mb-4">
@@ -89,7 +83,7 @@ export default function Seigs25Page() {
           <p className="text-gray-600 mb-4">
             All submissions must conform to the IEEE Conference Proceedings Formatting Guidelines (title in 24pt font and full text in 10pt type, LaTeX users must use <code>{'\\'}documentclass[10pt,conference]{"{IEEEtran}"}</code> without including the <code>compsoc</code> or <code>compsocconf</code> option).
           </p>
-          <h2 className="text-xl font-bold text-red-700 mb-2 mt-8">
+          <h2 className="text-xl font-bold text-red-700 mb-0 mt-8">
             List of Topics
           </h2>
           <p className="text-gray-600 mb-4">
@@ -100,17 +94,17 @@ export default function Seigs25Page() {
               <h3 className="text-lg font-semibold">
                 Applications in
               </h3>
-              <p className="text-gray-600">
-                Financial Services<br />
-                Agriculture<br />
-                Sustainable Cities<br />
-                Healthcare<br />
-                Education<br />
-                Transportation<br />
-                Environment and Climate Change<br />
-                Energy (e.g., smart grids)<br />
-                Conflict and Crisis Management
-              </p>
+              <ul className="list-outside list-disc text-gray-600 mt-0 mb-4">
+                <li>Financial Services</li>
+                <li>Agriculture</li>
+                <li>Sustainable Cities</li>
+                <li>Healthcare</li>
+                <li>Education</li>
+                <li>Transportation</li>
+                <li>Environment and Climate Change</li>
+                <li>Energy (e.g., smart grids)</li>
+                <li>Conflict and Crisis Management</li>
+              </ul>
             </li>
             <li className="basis-1/3 bg-white p-4 rounded shadow">
               <h3 className="text-lg font-semibold">
@@ -124,16 +118,16 @@ export default function Seigs25Page() {
               <h3 className="text-lg font-semibold">
                 Community and Outreach
               </h3>
-              <p className="text-gray-600">
-                Building Research Networks<br />
-                Software Innovations and Startups<br />
-                Growing the IT-Industry<br />
-                Setting up IT-Outsourcing<br />
-                National Policies for Growing the IT Industry
-              </p>
+              <ul className="list-outside list-disc text-gray-600 mt-0 mb-4">
+                <li>Building Research Networks</li>
+                <li>Software Innovations and Startups</li>
+                <li>Growing the IT-Industry</li>
+                <li>Setting up IT-Outsourcing</li>
+                <li>National Policies for Growing the IT-Industry</li>
+              </ul>
             </li>
           </ul>
-          <h2 className="text-xl font-bold text-red-700 mb-2 mt-8">
+          <h2 className="text-xl font-bold text-red-700 mb-0 mt-8">
             Program Committee (to be extended)
           </h2>
           <p className="text-gray-600 mb-4">
@@ -148,21 +142,21 @@ export default function Seigs25Page() {
             Chitsutha Soomlek (KKU, Thailand)<br />
             Agung Dewandaru (ITB, Bandung, Indonesia)
           </p>
-          <h2 className="text-xl font-bold text-red-700 mb-2 mt-8">
+          <h2 className="text-xl font-bold text-red-700 mb-0 mt-8">
             Organizing Committee
           </h2>
           <p className="text-gray-600 mb-4">
             Michel R.V. Chaudron (TU Eindhoven, The Netherlands)<br />
             Engineer Bainomugisha (Makerere University, Uganda)
           </p>
-          <h2 className="text-xl font-bold text-red-700 mb-2 mt-8">
+          <h2 className="text-xl font-bold text-red-700 mb-0 mt-8">
             Publication
           </h2>
           <p className="text-gray-600 mb-4">
             Accepted papers will be published in the electronic ICSE 2025 Proceedings in the IEEE Digital Library.
             Authors of accepted papers are required to register for the symposium and attend the symposium in order to have the paper included in the proceedings. The official publication date of the symposium proceedings is the date the proceedings are made available by IEEE.
           </p>
-          <h2 className="text-xl font-bold text-red-700 mb-2 mt-8">
+          <h2 className="text-xl font-bold text-red-700 mb-0 mt-8">
             Venue
           </h2>
           <p className="text-gray-600 mb-4">
