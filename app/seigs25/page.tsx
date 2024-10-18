@@ -33,7 +33,7 @@ export default function Seigs25Page() {
           <p className="text-gray-600 mb-4">
             The event provides a platform for exchanging ideas on:
           </p>
-          <ul className="list-inside list-disc text-gray-600 mt-0 mb-4">
+          <ul className="list-outside pl-8 list-disc text-gray-600 mt-0 mb-4">
             <li>
                 Academic research in Software Engineering (any topic fitting the ICSE list of topics),
             </li>
@@ -80,7 +80,7 @@ export default function Seigs25Page() {
           <p className="text-gray-600 mb-4">
             All submissions must be in English and formatted according to the ICSE 2025 Format and Submission Guidelines:
           </p>
-          <p className="text-gray-600 mb-4">
+          <p className="text-gray-600 mb-4 bg-white p-4 rounded shadow">
             All submissions must conform to the IEEE Conference Proceedings Formatting Guidelines (title in 24pt font and full text in 10pt type, LaTeX users must use <code>{'\\'}documentclass[10pt,conference]{"{IEEEtran}"}</code> without including the <code>compsoc</code> or <code>compsocconf</code> option).
           </p>
           <h2 className="text-xl font-bold text-red-700 mb-0 mt-8">
@@ -94,7 +94,7 @@ export default function Seigs25Page() {
               <h3 className="text-lg font-semibold">
                 Applications in
               </h3>
-              <ul className="list-inside list-disc text-gray-600 mt-0 mb-4">
+              <ul className="list-outside pl-8 list-disc text-gray-600 mt-0 mb-4">
                 <li>Financial Services</li>
                 <li>Agriculture</li>
                 <li>Sustainable Cities</li>
@@ -118,7 +118,7 @@ export default function Seigs25Page() {
               <h3 className="text-lg font-semibold">
                 Community and Outreach
               </h3>
-              <ul className="list-inside list-disc text-gray-600 mt-0 mb-4">
+              <ul className="list-outside pl-8 list-disc text-gray-600 mt-0 mb-4">
                 <li>Building Research Networks</li>
                 <li>Software Innovations and Startups</li>
                 <li>Growing the IT-Industry</li>
