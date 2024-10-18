@@ -33,7 +33,7 @@ export default function Seigs25Page() {
           <p className="text-gray-600 mb-4">
             The event provides a platform for exchanging ideas on:
           </p>
-          <ul className="list-disc text-gray-600 mt-0 mb-4">
+          <ul className="list-inside list-disc text-gray-600 mt-0 mb-4">
             <li>
                 Academic research in Software Engineering (any topic fitting the ICSE list of topics),
             </li>
@@ -94,7 +94,7 @@ export default function Seigs25Page() {
               <h3 className="text-lg font-semibold">
                 Applications in
               </h3>
-              <ul className="list-disc text-gray-600 mt-0 mb-4">
+              <ul className="list-inside list-disc text-gray-600 mt-0 mb-4">
                 <li>Financial Services</li>
                 <li>Agriculture</li>
                 <li>Sustainable Cities</li>
@@ -118,7 +118,7 @@ export default function Seigs25Page() {
               <h3 className="text-lg font-semibold">
                 Community and Outreach
               </h3>
-              <ul className="list-disc text-gray-600 mt-0 mb-4">
+              <ul className="list-inside list-disc text-gray-600 mt-0 mb-4">
                 <li>Building Research Networks</li>
                 <li>Software Innovations and Startups</li>
                 <li>Growing the IT-Industry</li>
@@ -130,7 +130,7 @@ export default function Seigs25Page() {
           <h2 className="text-xl font-bold text-red-700 mb-0 mt-8">
             Program Committee (to be extended)
           </h2>
-          <ul className="list-none text-gray-600 mt-0 mb-4">
+          <ul className="list-inside list-none text-gray-600 mt-0 mb-4">
             <li>Ibrahim Adeyanju (Federal University Oye-Ekiti, Nigeria)</li>
             <li>Yirsaw Ayalew (University of Botswana, Botswana)</li>
             <li>Joseph K Balikuddembe (Makerere University, Uganda)</li>
@@ -145,7 +145,7 @@ export default function Seigs25Page() {
           <h2 className="text-xl font-bold text-red-700 mb-0 mt-8">
             Organizing Committee
           </h2>
-          <ul className="list-none text-gray-600 mt-0 mb-4">
+          <ul className="list-inside list-none text-gray-600 mt-0 mb-4">
             <li>Michel R.V. Chaudron (TU Eindhoven, The Netherlands)</li>
             <li>Engineer Bainomugisha (Makerere University, Uganda)</li>
           </ul>
