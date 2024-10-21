@@ -8,7 +8,7 @@ export default function Seigs25Page() {
   return (
     <div>
       <Navbar menuItems={menuItems} pageSelected="" />
-      <div className="flex flex-col items-center justify-center bg-gray-50 min-h-screen">
+      <div className="flex flex-col items-center justify-center bg-gray-50 min-h-screen" style={{textAlign: 'justify'}}>
         {/* <Image
           src={IndustryImage}
           width={0}
@@ -84,7 +84,7 @@ export default function Seigs25Page() {
             All submissions must conform to the IEEE Conference Proceedings Formatting Guidelines (title in 24pt font and full text in 10pt type, LaTeX users must use <code>{'\\'}documentclass[10pt,conference]{"{IEEEtran}"}</code> without including the <code>compsoc</code> or <code>compsocconf</code> option).
           </p>
           <p className="text-gray-600 mb-4">
-            Manuscripts must be submitted in PDF format via EasyChair: 
+            Manuscripts must be submitted in PDF format via EasyChair:
           </p>
           <p className="text-gray-600 mb-4 bg-white p-4 rounded shadow">
             <a href="https://easychair.org/conferences/?conf=seigs2025" className="text-red-600 hover:underline">https://easychair.org/conferences/?conf=seigs2025</a>
@@ -95,7 +95,7 @@ export default function Seigs25Page() {
           <p className="text-gray-600 mb-4">
             We are seeking high quality papers from researchers, professionals, and innovators on but not limited to the following topics:
           </p>
-          <ul className="flex flex-row gap-4 items-stretch place-items-stretch">
+          <ul className="flex flex-row gap-4 items-stretch place-items-stretch" style={{textAlign: 'left'}}>
             <li className="basis-1/3 bg-white p-4 rounded shadow">
               <h3 className="text-lg font-semibold">
                 Applications in
