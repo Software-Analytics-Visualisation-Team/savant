@@ -35,7 +35,6 @@ export const CLASSVIZ_FUNDING = '';
 export const CLASSVIZ_STATUS = 'Active';
 
 export const MENU_ITEMS = [
-  { name: 'SEiGS 2025', route: './seigs25' },
   { name: 'Industrial Projects', route: './industrial-projects' },
   { name: 'Academic Projects', route: './projects' },
   { name: 'Positions', route: './openings' },
