@@ -35,8 +35,8 @@ export const CLASSVIZ_FUNDING = '';
 export const CLASSVIZ_STATUS = 'Active';
 
 export const MENU_ITEMS = [
-  { name: 'Industrial Projects', route: './industrial-projects' },
-  { name: 'Academic Projects', route: './projects' },
-  { name: 'Positions', route: './openings' },
+  { name: 'Industrial Collaborations', route: './industrial-collabs' },
+  { name: 'Projects', route: './projects' },
+  { name: 'News', route: './news' },
   { name: 'Contact us', route: './contacts' }
 ];
