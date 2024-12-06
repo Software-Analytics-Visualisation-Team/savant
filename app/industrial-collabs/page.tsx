@@ -89,13 +89,12 @@ const collaborators = [
   }
 ];
 
-export default function IndustrialProjectsPage() {
+export default function IndustrialCollaborationsPage() {
   return (
     <div>
       <Navbar menuItems={menuItems} pageSelected="" />
       <div
         className="flex flex-col items-center justify-center bg-gray-50 min-h-screen"
-        style={{ textAlign: 'justify' }}
       >
         <Image
           src={IndustryImage}
@@ -105,7 +104,7 @@ export default function IndustrialProjectsPage() {
           alt="Industry Image"
           style={{ width: '100vw', height: 'auto' }}
         />
-        <div className="max-w-5xl">
+        <div className="max-w-5xl pl-2 pr-2">
           <h1 className="text-3xl font-bold text-red-600 mb-4 pt-6">
             Unlocking Software Insights: Your Path to Better Architecture
           </h1>
