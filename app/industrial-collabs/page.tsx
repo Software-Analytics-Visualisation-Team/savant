@@ -6,6 +6,7 @@ import { Link } from '@nextui-org/react';
 import Image from 'next/image';
 import ContactCard from '../components/ContactCard';
 import IndustryImage from '../../public/industry-image-3.jpg';
+import JProfilerLogo from '../../public/jprofiler_large.png';
 import MichelPortrait from '../../public/portraits/michel.jpeg';
 import { MENU_ITEMS as menuItems } from '../constants';
 
@@ -46,11 +47,56 @@ const tools = [
   }
 ];
 
+const collaborators = [
+  {
+    key: 'TF',
+    name: (
+      <Link
+        className="hover:text-red-600"
+        color="foreground"
+        href="https://www.thermofisher.com/nl/en/home/brands/thermo-scientific.html.html"
+      >
+        ThermoFisher Scientific
+      </Link>
+    ),
+    description: ''
+  },
+  {
+    key: 'Phillips',
+    name: (
+      <Link
+        className="hover:text-red-600"
+        color="foreground"
+        href="https://www.usa.philips.com/healthcare/e/image-guided-therapy"
+      >
+        Phillips Image Guided Therapy
+      </Link>
+    ),
+    description: ''
+  },
+  {
+    key: 'ASML',
+    name: (
+      <Link
+        className="hover:text-red-600"
+        color="foreground"
+        href="https://www.asml.com/en"
+      >
+        ASML
+      </Link>
+    ),
+    description: ''
+  }
+];
+
 export default function IndustrialProjectsPage() {
   return (
     <div>
       <Navbar menuItems={menuItems} pageSelected="" />
-      <div className="flex flex-col items-center justify-center bg-gray-50 min-h-screen" style={{textAlign: 'justify'}}>
+      <div
+        className="flex flex-col items-center justify-center bg-gray-50 min-h-screen"
+        style={{ textAlign: 'justify' }}
+      >
         <Image
           src={IndustryImage}
           width={0}
@@ -93,6 +139,25 @@ export default function IndustrialProjectsPage() {
             email="m.r.v.chaudron@tue.nl"
             personalPage="https://research.tue.nl/en/persons/michel-rv-chaudron"
           />
+          <h1 className="text-2xl font-bold text-red-700 mb-4">Tools we use</h1>
+
+          <Link href="https://www.ej-technologies.com/jprofiler">
+            <Image
+              src={JProfilerLogo}
+              alt="Industry Image"
+              style={{ width: 'auto', height: 'auto' }}
+            />
+          </Link>
+          <h1 className="text-2xl font-bold text-red-700 mb-4">
+            Our collaborators
+          </h1>
+          <ul>
+            {collaborators.map((collaborator) => (
+              <li key={collaborator.key} className="pb-2">
+                <strong>{collaborator.name}</strong> {collaborator.description}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
       <Footer />
