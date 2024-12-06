@@ -6,6 +6,7 @@ import SatrioPortrait from '../public/portraits/satrio.jpeg';
 import FilipPortrait from '../public/portraits/filip.jpeg';
 import MerelPortrait from '../public/portraits/merel.jpg';
 import FelipePortrait from '../public/portraits/felipe.jpeg';
+import KevinPortrait from '../public/portraits/kevin.jpeg';
 import { NextUIProvider } from '@nextui-org/react';
 import PersonCard from './components/PersonCard';
 import Navbar from './components/Navbar';
@@ -44,7 +45,7 @@ export default function Home() {
           <div className="text-3xl flex justify-center font-bold text-red-600 mb-3">
             Our Goal
           </div>
-          <div className="text-xl text-black" style={{textAlign: 'justify'}}>
+          <div className="text-xl text-black" style={{ textAlign: 'justify' }}>
             In the dynamic landscape of software engineering, we are a group of
             passionate researchers collaborating to push the boundaries of
             knowledge. Our goal is twofold: Software Architecture: Delve into
@@ -111,6 +112,13 @@ export default function Home() {
               image={FelipePortrait.src}
               quote="Research interests: Low-Code, Formal Verification, Embedded Systems, and Software architecture"
               personalPage="https://research.tue.nl/en/persons/felipe-de-azeredo-coutinho-xavier"
+            />
+            <PersonCard
+              name="Kevin Bouwmeester"
+              position="PhD Candidate"
+              image={KevinPortrait.src}
+              quote="Research interests: Digital Twins for the Human Body (HDTs)"
+              personalPage="https://research.tue.nl/en/persons/kevin-bouwmeester"
             />
           </div>
         </div>
