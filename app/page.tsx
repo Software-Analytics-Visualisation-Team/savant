@@ -30,7 +30,7 @@ export default function Home() {
             /> */}
             <div className="justify-center items center pl-4">
               <div className="text-5xl font-bold text-red-600">
-                Software Analytics & Visualisation Team
+                Software Architecture Analytics & Visualisation Team
               </div>
               <div className="">
                 <p className="text-3xl text-black">

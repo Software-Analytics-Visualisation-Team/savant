@@ -26,7 +26,7 @@ export default function Navbar(props: NavbarProps) {
 
     return (
         <NextUINavbar
-            maxWidth="xl"
+            maxWidth="full"
             classNames={{ wrapper: 'gap-6' }}
             isMenuOpen={isMenuOpen}
             onMenuOpenChange={setIsMenuOpen}
@@ -34,13 +34,13 @@ export default function Navbar(props: NavbarProps) {
             <NavbarContent className="data-[justify=start]:flex-grow-0">
                 <NavbarMenuToggle
                     aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-                    className="sm:hidden"
+                    className="md:hidden"
                 />
                 <NavbarBrand className="gap-2">
                     <Link href="/savant">
                         {/* <Image src={SavantLogo} alt="Savant logo" width={45} height={45}/> */}
                         <p className="text-serif font-bold text-sm sm:text-lg text-red-600">
-                            Software Analytics & Visualisation Team
+                            Software Architecture Analytics & Visualisation Team
                         </p>
                     </Link>
                 </NavbarBrand>
@@ -48,7 +48,7 @@ export default function Navbar(props: NavbarProps) {
 
             <NavbarContent
                 justify="end"
-                className="hidden sm:flex gap-4 data-[justify=end]:flex-grow-0"
+                className="hidden md:flex gap-4 data-[justify=end]:flex-grow-0"
             >
                 {props.menuItems !== undefined &&
                     props.menuItems.length == 0 &&

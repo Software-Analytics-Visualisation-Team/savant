@@ -36,7 +36,7 @@ export const CLASSVIZ_STATUS = 'Active';
 
 export const MENU_ITEMS = [
   { name: 'Industrial Collaborations', route: './industrial-collabs' },
-  { name: 'Projects', route: './projects' },
+  { name: 'Projects & Tools', route: './projects' },
   { name: 'News', route: './news' },
   { name: 'Contact us', route: './contacts' }
 ];
