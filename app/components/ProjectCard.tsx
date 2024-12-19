@@ -2,7 +2,6 @@ import React from 'react';
 import { Card as CardNextUi, CardBody, Image } from '@nextui-org/react';
 
 interface ProjectProps {
-  imageSource: string;
   projectName: string;
   projectDescription: string;
   projectContact: string;
@@ -24,29 +23,9 @@ export default function ProjectCard(props: ProjectProps) {
         <CardBody>
           <div className="flex flex-col items-center justify-center p-1">
             <div className="relative col-start-1 col-span-1 gap-1 md:col-span-2">
-              {props.imageSource != '' && (
-                <div className="grid grid-cols-6 gap-2 items-center">
-                  <Image
-                    alt="Project image"
-                    className="object-cover col-span-1"
-                    height={100}
-                    shadow="md"
-                    src={props.imageSource}
-                    width={100}
-                  />
-                  <div className="col-start-2 col-span-5 mb-[5px]">
-                    <h3 className="font-semibold text-2xl text-foreground/90">
-                      {props.projectName}
-                    </h3>
-                  </div>
-                </div>
-              )}
-
-              {props.imageSource == '' && (
                 <h3 className="font-semibold text-2xl text-foreground/90">
                   {props.projectName}
                 </h3>
-              )}
               <div className="flex justify-center mx-auto p-1" style={{textAlign: 'justify'}}>
                 {props.projectDescription}
               </div>
