@@ -7,6 +7,8 @@ import FilipPortrait from '../public/portraits/filip.jpeg';
 import MerelPortrait from '../public/portraits/merel.jpg';
 import FelipePortrait from '../public/portraits/felipe.jpeg';
 import KevinPortrait from '../public/portraits/kevin.jpeg';
+import JacobPortrait from '../public/portraits/jacob.jpg';
+import SupunPortrait from '../public/portraits/Supun.png';
 import { NextUIProvider } from '@nextui-org/react';
 import PersonCard from './components/PersonCard';
 import Navbar from './components/Navbar';
@@ -86,6 +88,13 @@ export default function Home() {
               personalPage="https://research.tue.nl/en/persons/lina-ochoa-venegas"
             />
             <PersonCard
+              name="Jacob Krüger"
+              position="Assistant Professor"
+              image={JacobPortrait.src}
+              quote="I am specializing in the development and evolution of variant-rich software systems. Variant-rich systems exist in different customizable variants and have become the most widely existing form of software systems in all areas of society."
+              personalPage="https://research.tue.nl/en/persons/jacob-kr%C3%BCger"
+            />
+            <PersonCard
               name="Satrio Adi Rukmono"
               position="PhD Candidate"
               image={SatrioPortrait.src}
@@ -119,6 +128,13 @@ export default function Home() {
               image={KevinPortrait.src}
               quote="Research interests: Digital Twins for the Human Body (HDTs)"
               personalPage="https://research.tue.nl/en/persons/kevin-bouwmeester"
+            />
+            <PersonCard
+              name="Supun Wijayakoon"
+              position="PhD Candidate"
+              image={SupunPortrait.src}
+              quote="Research interests: Spftware Architecture, Software Analytics, Software Visualization"
+              personalPage="https://research.tue.nl/en/persons/supun-wijekoon-bandara-mudiyanselage"
             />
           </div>
         </div>
