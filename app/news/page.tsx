@@ -3,15 +3,23 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { MENU_ITEMS as menuItems } from '../constants';
 import Image from 'next/image';
+import SupunPortrait from '../../public/portraits/Supun.png';
 import SEiGS_image from '../../public/news/SEiGS.jpeg';
 import SEiGS_sponsorship from '../../public/news/SEiGS_Sponsorship.jpeg';
 
 const newsItems = [
-  {
-    title: "SEiGS Symposium: 13 accepted papers",
-    date: "January 17, 2024",
-    imageUrl: SEiGS_image.src,
-    text: `We’re thrilled to share exciting updates about the Software Engineering in the Global South (SEiGS) symposium, which will take place on May 3, 2025, as part of ICSE 2025! This unique event aims to highlight the transformative potential of software engineering to address pressing challenges and foster innovation in the Global South.
+{
+  title: "New team member joins SAVANT",
+  date: "Feburary 3, 2025",
+  imageUrl: SupunPortrait.src,
+  text: `We are excited to share that Supun Wijayakoon has joined the SAVANT team as a Doctoral candidate. Supun will be working on the COMARIC project together with Filip Zamfirov. She will focus on the development of novel techniques for software architecture analysis and visualization. Welcome, Supun!`,
+    link: {text:"Supun's TU/e page", url:"https://research.tue.nl/en/persons/supun-wijekoon-bandara-mudiyanselage"},  
+},
+{
+  title: "SEiGS Symposium: 13 accepted papers",
+  date: "January 17, 2024",
+  imageUrl: SEiGS_image.src,
+  text: `We’re thrilled to share exciting updates about the Software Engineering in the Global South (SEiGS) symposium, which will take place on May 3, 2025, as part of ICSE 2025! This unique event aims to highlight the transformative potential of software engineering to address pressing challenges and foster innovation in the Global South.
 
 Out of many impressive submissions, 13 exceptional papers have been accepted, representing thought-provoking work from authors in Australia, Papua New Guinea, Botswana, Indonesia, Tanzania, Uganda, UAE and the USA. These contributions span a diverse range of topics from insights on IoT, Generative AI (GenAI), to the development and application of safety-critical systems in resource-constrained settings, underscoring the exciting intersections between cutting-edge technology and practical problem-solving.
 
