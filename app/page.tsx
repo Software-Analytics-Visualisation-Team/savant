@@ -126,7 +126,7 @@ export default function Home() {
               name="Kevin Bouwmeester"
               position="PhD Candidate"
               image={KevinPortrait.src}
-              quote="Research interests: Digital Twins for the Human Body (HDTs)"
+              quote="Research interests: Digital Twins, Software Architecture, Game-Design, and Software Design"
               personalPage="https://research.tue.nl/en/persons/kevin-bouwmeester"
             />
             <PersonCard
