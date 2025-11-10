@@ -1,6 +1,6 @@
 import PersonCard from './components/PersonCard';
 
-import ContactCard from '../components/ContactCard';
+import ContactCard from './components/ContactCard';
 
 import MichelPortrait from '../public/portraits/michel.jpeg';
 import LinaPortrait from '../public/portraits/lina.jpeg';
