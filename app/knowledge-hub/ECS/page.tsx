@@ -10,8 +10,9 @@ import { KevinContact } from '@/app/person-constants';
 import { MENU_ITEMS as menuItems } from '../../constants';
 
 import ECSImage from '../../../public/knowledge-hub/ECS/ECS.jpg';
-import ECSHTML from '../../../public/knowledge-hub/ECS/paper.html';
 
+// Prefix for where the assets live under /public
+const SRC = '@public/knowledge-hub/ECS/paper.html';
 
 export default function Home() {
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
@@ -63,7 +64,7 @@ export default function Home() {
           
           <iframe
             ref={iframeRef}
-            src={ECSHTML.src}
+            src={SRC}
             title="Paper"
             style={{
               width: '100%',
