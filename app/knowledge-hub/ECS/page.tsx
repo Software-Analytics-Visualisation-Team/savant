@@ -4,19 +4,26 @@ import Image from 'next/image';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 
 import { KevinContact } from '@/app/person-constants';
 import { MENU_ITEMS as menuItems } from '../../constants';
 
 import ECSImage from '../../../public/knowledge-hub/ECS/ECS.jpg';
 
-// Prefix for where the assets live under /public
-const SRC = '@public/knowledge-hub/ECS/paper.html';
-
 export default function Home() {
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   // Auto-resize iframe height after it loads (same-origin, so allowed)
+  
+  const basePath = useMemo(() => {
+    if (typeof window === 'undefined') return '';
+    const path = window.location.pathname;
+    const match = path.match(/^\/[^/]+/); // gets "/savant" from "/savant/knowledge-hub/..."
+    return match ? match[0] : '';
+  }, []);
+
+  const SRC = `${basePath}/knowledge-hub/ECS/paper.html`;
+  
   useEffect(() => {
     const ifr = iframeRef.current;
     if (!ifr) return;
