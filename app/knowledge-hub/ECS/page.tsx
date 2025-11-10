@@ -22,7 +22,7 @@ export default function Home() {
     return match ? match[0] : '';
   }, []);
 
-  const SRC = `${basePath}/knowledge-hub/ECS/paper.html`;
+  const SRC = `${basePath}/savant/knowledge-hub/ECS/paper.html`;
   
   useEffect(() => {
     const ifr = iframeRef.current;
