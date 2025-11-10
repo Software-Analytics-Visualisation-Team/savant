@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import html from '@app/knowledge-hub/ECS/paper.html';
+import html from '@/app/knowledge-hub/ECS/html/paper.html';
 import { KevinContact } from '@/app/person-constants';
 import ECSImage from '../../public/knowledge-hub/ECS.jpg'
 
