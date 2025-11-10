@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import html from '@/app/knowledge-hub/ECS/latex/paper.html';
+import html from '../../public/knowledge-hub/ECS/paper.html';
 import { KevinContact } from '@/app/person-constants';
-import ECSImage from '../../public/knowledge-hub/ECS.jpg'
+import ECSImage from '../../public/knowledge-hub/ECS/ECS.jpg'
 
 // const menuItems = [
 //   { name: 'SEiGS 2025', route: '../seigs25' },
@@ -35,9 +35,9 @@ export default function Home() {
           />
           <a href="https://doi.org/10.1016/j.simpat.2020.102243"> Vico: An entity-component-system based co-simulation framework</a>
 
-          <object type="text/html" data={html} style={{ width: '100%', height: '800px', border: 'none' }}>
-            Your browser does not support displaying this content.
-          </object>
+          <main className="prose max-w-none">
+            <article dangerouslySetInnerHTML={{ __html: html }} />
+          </main>
 
           {/* Contact Section */}
           <div className="border-t mt-4 pt-4">
