@@ -1,17 +1,7 @@
 'use client';
 import Image from 'next/image';
-import MichelPortrait from '../public/portraits/michel.jpeg';
-import LinaPortrait from '../public/portraits/lina.jpeg';
-import SatrioPortrait from '../public/portraits/satrio.jpeg';
-import FilipPortrait from '../public/portraits/filip.jpeg';
-import MerelPortrait from '../public/portraits/merel.jpg';
-import FelipePortrait from '../public/portraits/felipe.jpeg';
-import KevinPortrait from '../public/portraits/kevin.jpeg';
-import JacobPortrait from '../public/portraits/jacob.jpg';
-import SupunPortrait from '../public/portraits/Supun.png';
 import { NextUIProvider } from '@nextui-org/react';
-import PersonCard from './components/PersonCard';
-import { FelipeCard, FilipCard, JacobCard, KevinCard, LinaCard, MerelCard, MichelCard, SatrioCard, SupunCard } from './personcards';
+import { FelipeCard, FilipCard, JacobCard, KevinCard, LinaCard, MerelCard, MichelCard, SatrioCard, SupunCard } from './person-constants';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { MENU_ITEMS as menuItems } from './constants';

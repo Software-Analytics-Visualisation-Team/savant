@@ -1,8 +1,5 @@
 'use client';
 import Image from 'next/image';
-import ContactCard from '../../components/ContactCard';
-import MichelPortrait from '../../../public/portraits/michel.jpeg';
-import FilipPortrait from '../../../public/portraits/filip.jpeg';
 import WorkflowImage from '../../../public/andromeda-workflow.png';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
@@ -13,14 +10,16 @@ import {
   ANDROMEDA_COLLABORATOR_DESC,
   GALAXY_PROJECT_DESC
 } from '@/app/constants';
+import { FilipContact, MichelContact } from '@/app/person-constants';
 
-const menuItems = [
-  { name: 'SEiGS 2025', route: '../seigs25' },
-  { name: 'Industrial Projects', route: '../industrial-projects' },
-  { name: 'Academic Projects', route: '../projects' },
-  { name: 'Positions', route: '../openings' },
-  { name: 'Contact us', route: '../contacts' }
-];
+// const menuItems = [
+//   { name: 'SEiGS 2025', route: '../seigs25' },
+//   { name: 'Industrial Projects', route: '../industrial-projects' },
+//   { name: 'Academic Projects', route: '../projects' },
+//   { name: 'Positions', route: '../openings' },
+//   { name: 'Contact us', route: '../contacts' }
+// ];
+import { MENU_ITEMS as menuItems } from '../../constants';
 
 export default function Home() {
   return (
@@ -69,20 +68,8 @@ export default function Home() {
           <div className="border-t mt-4 pt-4">
             <h2 className="text-3xl font-semibold mb-2">Contact</h2>
             <div className="flex flex-col flex-wrap gap-6">
-              <ContactCard
-                name="Michel R.V. Chaudron"
-                position="Full Professor"
-                image={MichelPortrait.src}
-                email="m.r.v.chaudron@tue.nl"
-                personalPage="https://research.tue.nl/en/persons/michel-rv-chaudron"
-              />
-              <ContactCard
-                name="Filip Zamfirov"
-                position="PhD Candidate"
-                image={FilipPortrait.src}
-                email="f.zamfirov@tue.nl"
-                personalPage="https://research.tue.nl/en/persons/filip-zamfirov"
-              />
+              <MichelContact />
+              <FilipContact />
             </div>
           </div>
         </div>

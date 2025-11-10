@@ -71,6 +71,7 @@ export const BUBBLETEAVIZ_STATUS = 'Active';
 
 export const MENU_ITEMS = [
   { name: 'Industrial Collaborations', route: './industrial-collabs' },
+  { name: 'SEiGS 2025', route: '../seigs25' },
   { name: 'Projects & Tools', route: './projects' },
   { name: 'News', route: './news' },
   { name: 'Contact us', route: './contacts' }
