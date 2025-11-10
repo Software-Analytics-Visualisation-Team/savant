@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { MENU_ITEMS as menuItems } from '../constants';
 import ToolCard from '../components/ToolCard';
-import ECSImage from '../../public/knowledge-hub/ECS.jpg'
+import ECSImage from '../../public/knowledge-hub/ECS/ECS.jpg'
 
 export default function Home() {
   return (
