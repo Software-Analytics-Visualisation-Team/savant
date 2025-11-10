@@ -7,12 +7,10 @@ import Footer from '../../components/Footer';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import Script from 'next/script';
-
 import { KevinContact } from '@/app/person-constants';
-
-import ECSImage from '../../public/knowledge-hub/ECS/ECS.jpg'
-
 import { MENU_ITEMS as menuItems } from '../../constants';
+
+import ECSImage from '../../../public/knowledge-hub/ECS/ECS.jpg';
 
 
 // Prefix for where the assets live under /public
