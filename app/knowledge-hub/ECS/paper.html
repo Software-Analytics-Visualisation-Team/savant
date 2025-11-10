@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Kevin Bouwmeester" />
+  <meta name="author" content="Michel Chaudron" />
+  <title>Digital Twins and the Entity Component System (ECS) pattern</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Digital Twins and the Entity Component System (ECS)
+pattern</h1>
+<p class="author">Kevin Bouwmeester</p>
+<p class="author">Michel Chaudron</p>
+</header>
+<h1 id="the-entity-component-system-pattern">The Entity-Component System
+Pattern</h1>
+<p>The main purpose of this section is to introduce the ECS pattern and
+to elaborate on the principles that support it. We will do this through
+comparing the ECS pattern with other, more well-known patterns commonly
+found in the field of Digital Twin Engineering. Furthermore, the section
+will list some terminology and illustrations on the pattern that support
+later sections.</p>
+<h2 id="structure">Structure</h2>
+<p>To explain what the ECS pattern is, it is useful to compare it with
+the OOP paradigm. OOP provides practical aspects such as encapsulation
+and inheritance. Encapsulation provides the benefit of keeping related
+code, both variables and methods, together. This approach is also used
+by the Entity-Component architecture, which should not be confused with
+the Entity-Component-System Architectural pattern. Inheritance provides
+benefits for which code reusability is the primary one. However, in some
+applications, the hierarchical structure could become problematic if the
+structure does not account for a certain new type of entity.</p>
+<p>As mentioned, the ECS pattern has its roots in game development,
+where iterative development is common. The ECS pattern has the benefit
+of providing a high separation of concerns, which allows separate
+development teams to concurrently develop elements for their system, as
+well as to support more iterative development <span class="citation"
+data-cites="wiebuschDecouplingEntitycomponentsystemPattern2015 muratetAccessibilitySeriousGames2020">[1],
+[2]</span>. The pattern achieves this by defining <em>entities</em> as
+compositions of <strong>components</strong> instead of having
+<em>entities</em> inherit properties from <em>components</em>. In short,
+the ECS system pattern is defined through three major elements:
+<em>Entities</em>, <em>Components</em> and <em>Systems</em>.</p>
+<h2 id="entities">Entities</h2>
+<p>Entities are nothing more than a container with a unique identifier
+that is composed of components. Although this often implies that an
+entity can be represented by a simple integer, this is often extended
+with more descriptive information to clarify the desired purpose of the
+entity, as well as a name <span class="citation"
+data-cites="hatledalVicoEntitycomponentsystemBased2021">[3]</span>. To
+be usable, it is important that the entities can be easily managed.
+Sometimes, depending on the components of which the entity is composed,
+a <em>family</em> label is assigned to the entities. Such a label could
+be used to quickly discover entities that are composed of similar
+components.</p>
+<h2 id="components">Components</h2>
+<p>Components represent data. If well-designed, they are generic, small,
+and reusable. A component, to some extent, could be considered as a
+collection of properties. <em>Geometry</em> is a proper example, as this
+can be defined in different ways using different properties (e.g.
+length, width). Components could also be slightly more abstract, where a
+component itself serves as an identifying label to the entity that is
+composed from it (an example from game-design could be the
+differentiation between ally or foe).</p>
+<p>In the ECS pattern, the components are different from other
+entity-component designs, as they do not describe behavior. In classical
+OOP and Object-oriented composition, components include behavioral
+functionality, which is part of the encapsulation principle. The ECS
+completely decouples this, as behavior is determined based on the
+composition of Components, where <em>Systems</em> calculate
+state-changes to entity-component data.</p>
+<h2 id="systems">Systems</h2>
+<p>Systems act on entities, computing mutations to relevant components.
+Systems act only upon certain entities, which depend on the components
+it has. As a very basic example, if gravity exists within the simulated
+world, a <em>Gravity System</em> could be responsible for calculating
+vectors based on the mass of entities. This system could act upon
+entities that are composed of a <em>mass</em> component. In this way,
+the behavior of an entity is determined by the systems that act on the
+entity.</p>
+<p>In naive implementations, Systems have to iterate over all entities
+to determine which should be processed. This can be expansive,
+especially in software systems where timing is important. The concept of
+entity families mitigates this, providing dynamic grouping of entities
+based on their component composition <span class="citation"
+data-cites="hatledalVicoEntitycomponentsystemBased2021 LibgdxAshley2025">[3],
+[4]</span>.</p>
+<h2 id="an-example">An example</h2>
+<p>To clarify the differences between classical OOP and use of the ECS
+pattern, we provide a small example. Figure <a href="#fig:OOPVehicles"
+data-reference-type="ref" data-reference="fig:OOPVehicles">1</a> shows a
+simple class diagram that could be used to define different vehicles.
+The specialized classes <em>LandVehicle</em> and <em>SkyVehicle</em>
+inherit properties and methods from the <em>Vehicle</em> class. Each
+specialization might provide different implementations for the indicated
+methods as the way in which this is performed might differ. Further
+specialized classes could differentiate helicopters from airplanes and
+cars from bicycles. Similarly to actuation in a Digital Twin system,
+assume that an external actor controls the vehicles velocity. The public
+methods represent user controlled actions, while the
+<em>updatePosition()</em> method represents some logic that continuously
+updates the position of the vehicle based on its velocity and current
+position.</p>
+<p>When using the given classes, it becomes difficult to model a bicycle
+with flight capabilities. Multiple-inheritance could be used, but given
+the possibly different implementations of the shared methods, its
+behavior would likely have to be manually defined.</p>
+<p>Object-Oriented composition could be utilized, resulting in an
+Entity-Component implementation where entities are composed of the
+components which include behavioral components. However, this approach
+does not separate behavior from data. This approach could introduce
+additional overhead <span class="citation"
+data-cites="romeoAnalysisEntityEncoding2016">[5]</span>. Furthermore, to
+optimize this, software developers would have to optimize each
+individual method. This is more difficult to maintain and evolve.</p>
+<figure id="fig:OOPVehicles">
+<img src="Figures/OOP Vehicles.png" style="width:85.0%" />
+<figcaption>A simple UML class diagram that models vehicles</figcaption>
+</figure>
+<p>Using the ECS pattern, a vehicle entity could be modeled by composing
+it with desired components. Figure <a href="#fig:ECSVehicles"
+data-reference-type="ref" data-reference="fig:ECSVehicles">2</a> shows
+how this can be done. An <em>Input System</em> would process entities
+with the <em>user-controlled</em> and <em>linear velocity</em>
+components. A different system could be defined that acts on entities
+also composed of the <em>angular velocity</em> component, but the
+<em>input system</em> could also provide additional logic when this
+component is present. Finally, the <em>Position System</em> would act
+upon every entity with a velocity and position component, and calculate
+the new positions.</p>
+<p>Instead of requiring each entity to be scheduled for processing, only
+the <em>Systems</em> would require this when using the ECS pattern. In
+the given example, there would likely need to be some orchestration
+defining the order in which the systems are executed, as otherwise race
+conditions could occur. As such, the ECS pattern is not a panacea. It
+has uses in certain applications, specifically those in which many
+entities exhibit equal or similar behavior, as it reduces the overhead
+required. Furthermore, this approach allows entities to be adjusted at
+run-time, or even new systems to be introduced <span class="citation"
+data-cites="wiebuschDecouplingEntitycomponentsystemPattern2015">[1]</span>.</p>
+<figure id="fig:ECSVehicles">
+<img src="Figures/ECS Vehicle.png" style="width:85.0%" />
+<figcaption>A UML diagram representing how vehicles could be modeled
+using ECS</figcaption>
+</figure>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0"
+role="list">
+<div id="ref-wiebuschDecouplingEntitycomponentsystemPattern2015"
+class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">D.
+Wiebusch and M. E. Latoschik, <span>“Decoupling the
+entity-component-system pattern using semantic traits for reusable
+realtime interactive systems,”</span> in <em>2015 <span>IEEE</span> 8th
+<span>Workshop</span> on <span>Software Engineering</span> and
+<span>Architectures</span> for <span>Realtime Interactive Systems</span>
+(<span>SEARIS</span>)</em>, Mar. 2015, pp. 25–32. doi: <a
+href="https://doi.org/10.1109/SEARIS.2015.7854098">10.1109/SEARIS.2015.7854098</a>.</div>
+</div>
+<div id="ref-muratetAccessibilitySeriousGames2020" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">M.
+Muratet and D. Garbarini, <span>“Accessibility and <span>Serious
+Games</span>: <span>What About Entity-Component-System Software
+Architecture</span>?”</span> in <em>Games and <span>Learning
+Alliance</span></em>, I. Marfisi-Schottman, F. Bellotti, L. Hamon, and
+R. Klemke, Eds., Cham: Springer International Publishing, 2020, pp.
+3–12. doi: <a
+href="https://doi.org/10.1007/978-3-030-63464-3_1">10.1007/978-3-030-63464-3_1</a>.</div>
+</div>
+<div id="ref-hatledalVicoEntitycomponentsystemBased2021"
+class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">L.
+I. Hatledal, Y. Chu, A. Styve, and H. Zhang, <span>“Vico:
+<span>An</span> entity-component-system based co-simulation
+framework,”</span> <em>Simulation Modelling Practice and Theory</em>,
+vol. 108, p. 102243, Apr. 2021, doi: <a
+href="https://doi.org/10.1016/j.simpat.2020.102243">10.1016/j.simpat.2020.102243</a>.</div>
+</div>
+<div id="ref-LibgdxAshley2025" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div><div
+class="csl-right-inline"><em>Libgdx/ashley</em>. (Oct. 19, 2025).
+libgdx. Accessed: Oct. 23, 2025. [Online]. Available: <a
+href="https://github.com/libgdx/ashley">https://github.com/libgdx/ashley</a></div>
+</div>
+<div id="ref-romeoAnalysisEntityEncoding2016" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">V.
+Romeo, <span>“Analysis of entity encoding techniques, design and
+implementation of a multithreaded compile-time
+<span>Entity-Component-System C</span>++14 library,”</span> Università
+degli Studi di Messina, Italy, 2016. Accessed: Oct. 23, 2025. [Online].
+Available: <a
+href="https://www.researchgate.net/publication/305730566_Analysis_of_entity_encoding_techniques_design_and_implementation_of_a_multithreaded_compile-time_Entity-Component-System_C14_library">https://www.researchgate.net/publication/305730566_Analysis_of_entity_encoding_techniques_design_and_implementation_of_a_multithreaded_compile-time_Entity-Component-System_C14_library</a></div>
+</div>
+</div>
+</body>
+</html>
