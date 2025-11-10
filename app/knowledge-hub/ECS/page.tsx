@@ -10,10 +10,8 @@ import { KevinContact } from '@/app/person-constants';
 import { MENU_ITEMS as menuItems } from '../../constants';
 
 import ECSImage from '../../../public/knowledge-hub/ECS/ECS.jpg';
+import ECSHTML from '../../../public/knowledge-hub/ECS/paper.html';
 
-
-// Prefix for where the assets live under /public
-const SRC = '/knowledge-hub/ECS/paper.html';
 
 export default function Home() {
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
@@ -59,19 +57,21 @@ export default function Home() {
             alt="Full-width image"
             style={{ width: 'auto', height: 'auto' }}
           />
-          <a href="https://doi.org/10.1016/j.simpat.2020.102243"> Vico: An entity-component-system based co-simulation framework</a>
+          <a href="https://doi.org/10.1016/j.simpat.2020.102243"> 
+          Vico: An entity-component-system based co-simulation framework
+          </a>
           
-        <iframe
-          ref={iframeRef}
-          src={SRC}
-          title="Paper"
-          style={{
-            width: '100%',
-            height: '80vh', // initial height; will auto-resize
-            border: 'none',
-            background: 'transparent',
-          }}
-        />
+          <iframe
+            ref={iframeRef}
+            src={ECSHTML.src}
+            title="Paper"
+            style={{
+              width: '100%',
+              height: '80vh', // initial height; will auto-resize
+              border: 'none',
+              background: 'transparent',
+            }}
+          />
 
           {/* Contact Section */}
           <div className="border-t mt-4 pt-4">
