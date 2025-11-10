@@ -1,0 +1,47 @@
+
+\section{The Entity-Component System Pattern}
+The main purpose of this section is to introduce the ECS pattern and to elaborate on the principles that support it. We will do this through comparing the ECS pattern with other, more well-known patterns commonly found in the field of Digital Twin Engineering. Furthermore, the section will list some terminology and illustrations on the pattern that support later sections.
+
+\subsection{Structure}
+To explain what the ECS pattern is, it is useful to compare it with the OOP paradigm. OOP provides practical aspects such as encapsulation and inheritance. Encapsulation provides the benefit of keeping related code, both variables and methods, together. This approach is also used by the Entity-Component architecture, which should not be confused with the Entity-Component-System Architectural pattern. Inheritance provides benefits for which code reusability is the primary one. However, in some applications, the hierarchical structure could become problematic if the structure does not account for a certain new type of entity.
+
+As mentioned, the ECS pattern has its roots in game development, where iterative development is common. The ECS pattern has the benefit of providing a high separation of concerns, which allows separate development teams to concurrently develop elements for their system, as well as to support more iterative development \cite{wiebuschDecouplingEntitycomponentsystemPattern2015, muratetAccessibilitySeriousGames2020}. The pattern achieves this by defining \textit{entities} as compositions of \textbf{components} instead of having \textit{entities} inherit properties from \textit{components}. In short, the ECS system pattern is defined through three major elements: \textit{Entities}, \textit{Components} and \textit{Systems}.
+
+\subsection{Entities}
+Entities are nothing more than a container with a unique identifier that is composed of components. Although this often implies that an entity can be represented by a simple integer, this is often extended with more descriptive information to clarify the desired purpose of the entity, as well as a name \cite{hatledalVicoEntitycomponentsystemBased2021}. To be usable, it is important that the entities can be easily managed. Sometimes, depending on the components of which the entity is composed, a \textit{family} label is assigned to the entities. Such a label could be used to quickly discover entities that are composed of similar components.
+
+\subsection{Components}
+ Components represent data. If well-designed, they are generic, small, and reusable. A component, to some extent, could be considered as a collection of properties. \textit{Geometry} is a proper example, as this can be defined in different ways using different properties (e.g. length, width). Components could also be slightly more abstract, where a component itself serves as an identifying label to the entity that is composed from it (an example from game-design could be the differentiation between ally or foe).
+
+In the ECS pattern, the components are different from other entity-component designs, as they do not describe behavior. In classical OOP and Object-oriented composition, components include behavioral functionality, which is part of the encapsulation principle. The ECS completely decouples this, as behavior is determined based on the composition of Components, where \textit{Systems} calculate state-changes to entity-component data. 
+
+\subsection{Systems}
+ Systems act on entities, computing mutations to relevant components. Systems act only upon certain entities, which depend on the components it has. As a very basic example, if gravity exists within the simulated world, a \textit{Gravity System} could be responsible for calculating vectors based on the mass of entities. This system could act upon entities that are composed of a \textit{mass} component. In this way, the behavior of an entity is determined by the systems that act on the entity.
+
+ In naive implementations, Systems have to iterate over all entities to determine which should be processed. This can be expansive, especially in software systems where timing is important. The concept of entity families mitigates this, providing dynamic grouping of entities based on their component composition \cite{hatledalVicoEntitycomponentsystemBased2021,LibgdxAshley2025}.
+
+\subsection{An example}
+To clarify the differences between classical OOP and use of the ECS pattern, we provide a small example. Figure \ref{fig:OOPVehicles} shows a simple class diagram that could be used to define different vehicles. The specialized classes \textit{LandVehicle} and \textit{SkyVehicle} inherit properties and methods from the \textit{Vehicle} class. Each specialization might provide different implementations for the indicated methods as the way in which this is performed might differ. Further specialized classes could differentiate helicopters from airplanes and cars from bicycles. Similarly to actuation in a Digital Twin system, assume that an external actor controls the vehicles velocity. The public methods represent user controlled actions, while the \textit{updatePosition()} method represents some logic that continuously updates the position of the vehicle based on its velocity and current position. 
+
+When using the given classes, it becomes difficult to model a bicycle with flight capabilities. Multiple-inheritance could be used, but given the possibly different implementations of the shared methods, its behavior would likely have to be manually defined. 
+
+Object-Oriented composition could be utilized, resulting in an Entity-Component implementation where entities are composed of the components which include behavioral components. However, this approach does not separate behavior from data. This approach could  introduce additional overhead \cite{romeoAnalysisEntityEncoding2016}. Furthermore, to optimize this, software developers would have to optimize each individual method. This is more difficult to maintain and evolve.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.85\linewidth]{Figures/OOP Vehicles.png}
+    \caption{A simple UML class diagram that models vehicles}
+    \label{fig:OOPVehicles}
+\end{figure}
+
+Using the ECS pattern, a vehicle entity could be modeled by composing it with desired components. Figure \ref{fig:ECSVehicles} shows how this can be done. An \textit{Input System} would process entities with the \textit{user-controlled} and \textit{linear velocity} components. A different system could be defined that acts on entities also composed of the \textit{angular velocity} component, but the \textit{input system} could also provide additional logic when this component is present. Finally, the \textit{Position System} would act upon every entity with a velocity and position component, and calculate the new positions. 
+
+Instead of requiring each entity to be scheduled for processing, only the \textit{Systems} would require this when using the ECS pattern. In the given example, there would likely need to be some orchestration defining the order in which the systems are executed, as otherwise race conditions could occur. As such, the ECS pattern is not a panacea. It has uses in certain applications, specifically those in which many entities exhibit equal or similar behavior, as it reduces the overhead required. Furthermore, this approach allows entities to be adjusted at run-time, or even new systems to be introduced \cite{wiebuschDecouplingEntitycomponentsystemPattern2015}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.85\linewidth]{Figures/ECS Vehicle.png}
+    \caption{A UML diagram representing how vehicles could be modeled using ECS}
+    \label{fig:ECSVehicles}
+\end{figure}
