@@ -16,7 +16,7 @@ export default function Home() {
         </h1>
         <div className="z-10 flex flex-row flex-wrap gap-4 justify-center max-w-fit lg:flex pb-12">
           <ToolCard
-            href={"./knowledge-hub/ecs"}
+            href={"./knowledge-hub/ECS"}
             toolName={'Entity-Component-System (ECS) Pattern'}
             imageSource={ECSImage.src}
             toolDescription={'The Entity-Component-System (ECS) pattern is a software architectural pattern that is widely used in game development and simulations. It emphasizes composition over inheritance, allowing for more flexible and modular designs.'}

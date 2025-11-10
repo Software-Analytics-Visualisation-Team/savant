@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 import { KevinContact } from '@/app/person-constants';
 import { MENU_ITEMS as menuItems } from '../../constants';
@@ -13,22 +13,35 @@ import ECSImage from '../../../public/knowledge-hub/ECS/ECS.jpg';
 
 
 // Prefix for where the assets live under /public
-const PUBLIC_PREFIX = '/knowledge-hub/ECS';
+const SRC = '/knowledge-hub/ECS/paper.html';
 
 export default function Home() {
-  const [html, setHtml] = useState<string>('');
+  const iframeRef = useRef<HTMLIFrameElement | null>(null);
+  // Auto-resize iframe height after it loads (same-origin, so allowed)
   useEffect(() => {
-    fetch(`${PUBLIC_PREFIX}/paper.html`)
-      .then(r => r.text())
-      .then(t => {
-        // Optionally rewrite relative URLs if needed
-        const rewritten = t.replace(
-          /\b(src|href)="'([^"']+)["']/gi,
-          (_m, attr, url) => `${attr}="${PUBLIC_PREFIX}/${url}"`
+    const ifr = iframeRef.current;
+    if (!ifr) return;
+
+    const handleLoad = () => {
+      try {
+        const doc = ifr.contentDocument || ifr.contentWindow?.document;
+        if (!doc) return;
+        // compute height using scrollHeight of the page
+        const height = Math.max(
+          doc.documentElement?.scrollHeight || 0,
+          doc.body?.scrollHeight || 0
         );
-        setHtml(rewritten);
-      });
+        ifr.style.height = `${height}px`;
+      } catch (e) {
+        // If cross-origin (shouldn't be for /public), skip
+        console.warn('Could not auto-resize iframe:', e);
+      }
+    };
+
+    ifr.addEventListener('load', handleLoad);
+    return () => ifr.removeEventListener('load', handleLoad);
   }, []);
+
 
   return (
     <div>
@@ -47,10 +60,18 @@ export default function Home() {
             style={{ width: 'auto', height: 'auto' }}
           />
           <a href="https://doi.org/10.1016/j.simpat.2020.102243"> Vico: An entity-component-system based co-simulation framework</a>
-
-          <main className="prose max-w-none">
-            <article dangerouslySetInnerHTML={{ __html: html }} />
-          </main>
+          
+        <iframe
+          ref={iframeRef}
+          src={SRC}
+          title="Paper"
+          style={{
+            width: '100%',
+            height: '80vh', // initial height; will auto-resize
+            border: 'none',
+            background: 'transparent',
+          }}
+        />
 
           {/* Contact Section */}
           <div className="border-t mt-4 pt-4">
