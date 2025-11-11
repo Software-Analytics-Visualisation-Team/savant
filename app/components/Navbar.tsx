@@ -15,6 +15,9 @@ import Image from 'next/image';
 import { MENU_ITEMS } from '../constants';
 import SavantLogo from '../../public/savant.png';
 
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 interface NavbarProps {
   pageSelected: string;
 }
@@ -39,7 +42,7 @@ export default function Navbar(props: NavbarProps) {
 
     {/* Brand text on large screens only */}
     <NavbarBrand className="hidden lg:flex gap-2">
-    <Link href="/">
+    <Link href={`${basePath}/`}>
         <p className="text-serif font-bold text-sm sm:text-lg text-red-600 whitespace-normal break-words max-w-[300px]">
         Software Architecture Analytics & Visualisation Team
         </p>
@@ -48,7 +51,7 @@ export default function Navbar(props: NavbarProps) {
 
     {/* Optional: small logo on smaller screens */}
     <NavbarBrand className="flex lg:hidden">
-        <Link href="/">
+        <Link href={`${basePath}/`}>
             <Image
                 alt={`Savant logo`}
                 src={SavantLogo.src}
@@ -69,8 +72,8 @@ export default function Navbar(props: NavbarProps) {
             <Link
               className="hover:text-red-600 whitespace-nowrap transition-colors"
               color="foreground"
-              href={item.route}
-            >
+              key={item.route} 
+              href={`${basePath}/${item.route}`}>
               {item.name}
             </Link>
           </NavbarItem>
@@ -84,7 +87,8 @@ export default function Navbar(props: NavbarProps) {
             <Link
               color="foreground"
               className="w-full hover:text-red-600"
-              href={item.route}
+              key={item.route} 
+              href={`${basePath}/${item.route}`}
               size="lg"
             >
               {item.name}

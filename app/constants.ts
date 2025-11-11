@@ -1,9 +1,9 @@
 export const MENU_ITEMS = [
-  { name: 'Industrial Collaborations', route: '/industrial-collabs' },
-  { name: 'Projects & Tools', route: '/projects' },
-  { name: 'Knowledge Hub', route: '/knowledge-hub' },
-  { name: 'News', route: '/news' },
-  { name: 'Contact us', route: '/contacts' },
+  { name: 'Industrial Collaborations', route: 'industrial-collabs' },
+  { name: 'Projects & Tools', route: 'projects' },
+  { name: 'Knowledge Hub', route: 'knowledge-hub' },
+  { name: 'News', route: 'news' },
+  { name: 'Contact us', route: 'contacts' },
 ];
 
 // DeductiveSar

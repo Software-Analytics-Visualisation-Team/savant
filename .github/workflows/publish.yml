@@ -36,6 +36,7 @@ jobs:
           npx next build
         env:
           NODE_ENV: production
+          NEXT_PUBLIC_BASE_PATH: /savant
 
       - name: List files in root
         run: ls -la ./

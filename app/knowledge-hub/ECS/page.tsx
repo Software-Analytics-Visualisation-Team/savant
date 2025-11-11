@@ -14,12 +14,7 @@ export default function Home() {
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   // Auto-resize iframe height after it loads (same-origin, so allowed)
   
-  const basePath = useMemo(() => {
-    if (typeof window === 'undefined') return '';
-    const path = window.location.pathname;
-    const match = path.match(/^\/[^/]+/); // gets "/savant" from "/savant/knowledge-hub/..."
-    return match ? match[0] : '';
-  }, []);
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   const SRC = `${basePath}/knowledge-hub/ECS/paper.html`;
   
