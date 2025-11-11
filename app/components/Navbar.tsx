@@ -11,7 +11,9 @@ import {
   Navbar as NextUINavbar,
 } from '@nextui-org/navbar';
 import { Link } from '@nextui-org/react';
+import Image from 'next/image';
 import { MENU_ITEMS } from '../constants';
+import SavantLogo from '../../public/savant.png';
 
 interface NavbarProps {
   pageSelected: string;
@@ -47,7 +49,12 @@ export default function Navbar(props: NavbarProps) {
     {/* Optional: small logo on smaller screens */}
     <NavbarBrand className="flex lg:hidden">
         <Link href="/">
-        <img src="/small-logo.png" alt="Savant logo" className="h-8 w-auto" />
+            <Image
+                alt={`Savant logo`}
+                src={SavantLogo.src}
+                width={64}
+                height={64}
+            />
         </Link>
     </NavbarBrand>
     </NavbarContent>
