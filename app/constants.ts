@@ -70,8 +70,10 @@ export const BUBBLETEAVIZ_STATUS = 'Active';
 
 
 export const MENU_ITEMS = [
-  { name: 'Industrial Collaborations', route: './industrial-collabs' },
-  { name: 'Projects & Tools', route: './projects' },
-  { name: 'News', route: './news' },
-  { name: 'Contact us', route: './contacts' }
+  { name: 'Industrial Collaborations', route: '/savant/industrial-collabs' },
+  { name: 'SEiGS 2025', route: '/savant/seigs25' },
+  { name: 'Projects & Tools', route: '/savant/projects' },
+  { name: 'Knowledge Hub', route: '/savant/knowledge-hub' },
+  { name: 'News', route: '/savant/news' },
+  { name: 'Contact us', route: '/savant/contacts' }
 ];

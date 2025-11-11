@@ -4,11 +4,10 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Link } from '@nextui-org/react';
 import Image from 'next/image';
-import ContactCard from '../components/ContactCard';
 import IndustryImage from '../../public/industry-image-3.jpg';
 import JProfilerLogo from '../../public/jprofiler_large.png';
-import MichelPortrait from '../../public/portraits/michel.jpeg';
 import { MENU_ITEMS as menuItems } from '../constants';
+import { MichelContact } from '../person-constants';
 
 const tools = [
   {
@@ -131,13 +130,7 @@ export default function IndustrialCollaborationsPage() {
           </ul>
           <p className="text-gray-600 mb-4"></p>
           <h1 className="text-2xl font-bold text-red-700 mb-4">Contact Us</h1>
-          <ContactCard
-            name="Michel R.V. Chaudron"
-            position="Full Professor"
-            image={MichelPortrait.src}
-            email="m.r.v.chaudron@tue.nl"
-            personalPage="https://research.tue.nl/en/persons/michel-rv-chaudron"
-          />
+          <MichelContact />
           <h1 className="text-2xl font-bold text-red-700 mb-4">Tools we use</h1>
 
           <Link href="https://www.ej-technologies.com/jprofiler">
