@@ -4,12 +4,11 @@ import { NextUIProvider } from '@nextui-org/react';
 import { FelipeCard, FilipCard, JacobCard, KevinCard, LinaCard, MerelCard, MichelCard, SatrioCard, SupunCard } from './person-constants';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import { MENU_ITEMS as menuItems } from './constants';
 
 export default function Home() {
   return (
     <NextUIProvider>
-      <Navbar menuItems={menuItems} pageSelected="" />
+      <Navbar pageSelected="" />
       <main className="flex min-h-screen flex-col items-center justify-between bg-gray-50">
         <div className="z-10 max-w-7xl w-full items-center justify-between lg:flex pb-12">
           <div className="flex flex-wrap items-center justify-center pt-8 ">

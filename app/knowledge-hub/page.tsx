@@ -2,14 +2,13 @@
 import { NextUIProvider } from '@nextui-org/react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { MENU_ITEMS as menuItems } from '../constants';
 import ToolCard from '../components/ToolCard';
 import ECSImage from '../../public/knowledge-hub/ECS/ECS.jpg'
 
 export default function Home() {
   return (
     <NextUIProvider>
-      <Navbar menuItems={menuItems} pageSelected="" />
+      <Navbar pageSelected="" />
       <main className="flex min-h-screen flex-col items-center bg-gray-50">
         <h1 className="text-3xl font-bold text-red-600 mb-4 p-4 pb-0">
           Knowledge Hub

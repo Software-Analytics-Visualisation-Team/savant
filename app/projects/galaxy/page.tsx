@@ -12,19 +12,10 @@ import {
 } from '@/app/constants';
 import { FilipContact, MichelContact } from '@/app/person-constants';
 
-// const menuItems = [
-//   { name: 'SEiGS 2025', route: '../seigs25' },
-//   { name: 'Industrial Projects', route: '../industrial-projects' },
-//   { name: 'Academic Projects', route: '../projects' },
-//   { name: 'Positions', route: '../openings' },
-//   { name: 'Contact us', route: '../contacts' }
-// ];
-import { MENU_ITEMS as menuItems } from '../../constants';
-
 export default function Home() {
   return (
     <div>
-      <Navbar menuItems={menuItems} pageSelected="" />
+      <Navbar pageSelected="" />
 
       <div className="flex flex-col items-center justify-center bg-gray-50 min-h-screen" style={{textAlign: 'justify'}}>
         <div className="max-w-5xl">

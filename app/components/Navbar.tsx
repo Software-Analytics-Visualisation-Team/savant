@@ -1,114 +1,90 @@
 'use client';
 
 import { useState } from 'react';
-import { Button } from '@nextui-org/button';
-import Image from 'next/image';
 import {
-    NavbarBrand,
-    NavbarContent,
-    NavbarItem,
-    NavbarMenu,
-    NavbarMenuItem,
-    NavbarMenuToggle,
-    Navbar as NextUINavbar
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarMenuToggle,
+  Navbar as NextUINavbar,
 } from '@nextui-org/navbar';
 import { Link } from '@nextui-org/react';
-import SavantLogo from '../../public/savant_brain.jpeg';
-import { MENU_ITEMS as menuItems } from '../constants';
+import { MENU_ITEMS } from '../constants';
 
 interface NavbarProps {
-    menuItems: { name: string; route: string }[];
-    pageSelected: string;
+  pageSelected: string;
 }
 
 export default function Navbar(props: NavbarProps) {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    return (
-        <NextUINavbar
-            maxWidth="full"
-            classNames={{ wrapper: 'gap-6' }}
-            isMenuOpen={isMenuOpen}
-            onMenuOpenChange={setIsMenuOpen}
-        >
-            <NavbarContent className="data-[justify=start]:flex-grow-0">
-                <NavbarMenuToggle
-                    aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-                    className="md:hidden"
-                />
-                <NavbarBrand className="gap-2">
-                    <Link href="/savant">
-                        {/* <Image src={SavantLogo} alt="Savant logo" width={45} height={45}/> */}
-                        <p className="text-serif font-bold text-sm sm:text-lg text-red-600">
-                            Software Architecture Analytics & Visualisation Team
-                        </p>
-                    </Link>
-                </NavbarBrand>
-            </NavbarContent>
+  return (
+    <NextUINavbar
+      maxWidth="full"
+      classNames={{ wrapper: 'gap-4 px-4 sm:px-6 lg:px-8' }}
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+    >
+    {/* Left Section */}
+    <NavbarContent className="flex-shrink-0 items-center">
+    {/* Mobile Menu Toggle */}
+    <NavbarMenuToggle
+        aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+        className="md:hidden"
+    />
 
-            <NavbarContent
-                justify="end"
-                className="hidden md:flex gap-4 data-[justify=end]:flex-grow-0"
+    {/* Brand text on large screens only */}
+    <NavbarBrand className="hidden lg:flex gap-2">
+    <Link href="/">
+        <p className="text-serif font-bold text-sm sm:text-lg text-red-600 whitespace-normal break-words max-w-[300px]">
+        Software Architecture Analytics & Visualisation Team
+        </p>
+    </Link>
+    </NavbarBrand>
+
+    {/* Optional: small logo on smaller screens */}
+    <NavbarBrand className="flex lg:hidden">
+        <Link href="/">
+        <img src="/small-logo.png" alt="Savant logo" className="h-8 w-auto" />
+        </Link>
+    </NavbarBrand>
+    </NavbarContent>
+
+      {/* Desktop Menu */}
+      <NavbarContent
+        justify="end"
+        className="hidden md:flex gap-6 items-center flex-shrink-0"
+      >
+        {MENU_ITEMS.map((item, index) => (
+          <NavbarItem key={`mp${item.name}-${index}`}>
+            <Link
+              className="hover:text-red-600 whitespace-nowrap transition-colors"
+              color="foreground"
+              href={item.route}
             >
-                {props.menuItems !== undefined &&
-                    props.menuItems.length == 0 &&
-                    menuItems.map((item, index) => (
-                        <NavbarItem key={`mnp${item}-${index}`}>
-                            <Link
-                                className="hover:text-red-600"
-                                color="foreground"
-                                href={item.route}
-                            >
-                                {item.name}
-                            </Link>
-                        </NavbarItem>
-                    ))}
+              {item.name}
+            </Link>
+          </NavbarItem>
+        ))}
+      </NavbarContent>
 
-                {props.menuItems !== undefined &&
-                    props.menuItems.length > 0 &&
-                    props.menuItems.map((item, index) => (
-                        <NavbarItem key={`mp${item}-${index}`}>
-                            <Link
-                                className="hover:text-red-600"
-                                color="foreground"
-                                href={item.route}
-                            >
-                                {item.name}
-                            </Link>
-                        </NavbarItem>
-                    ))}
-            </NavbarContent>
-
-            <NavbarMenu>
-                {props.menuItems == undefined &&
-                    menuItems.map((item, index) => (
-                        <NavbarMenuItem key={`np${item}-${index}`}>
-                            <Link
-                                color={'foreground'}
-                                className="w-full hover:text-red-600"
-                                href={item.route}
-                                size="lg"
-                            >
-                                {item.name}
-                            </Link>
-                        </NavbarMenuItem>
-                    ))}
-
-                {props.menuItems !== undefined &&
-                    props.menuItems.length > 0 &&
-                    props.menuItems.map((item, index) => (
-                        <NavbarMenuItem key={`p${item}-${index}`}>
-                            <Link
-                                color={'foreground'}
-                                className="w-full hover:text-red-600"
-                                href={item.route}
-                                size="lg"
-                            >
-                                {item.name}
-                            </Link>
-                        </NavbarMenuItem>
-                    ))}
-            </NavbarMenu>
-        </NextUINavbar>
-    );
+      {/* Mobile Drawer Menu */}
+      <NavbarMenu>
+        {MENU_ITEMS.map((item, index) => (
+          <NavbarMenuItem key={`p${item.name}-${index}`}>
+            <Link
+              color="foreground"
+              className="w-full hover:text-red-600"
+              href={item.route}
+              size="lg"
+            >
+              {item.name}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
+    </NextUINavbar>
+  );
 }

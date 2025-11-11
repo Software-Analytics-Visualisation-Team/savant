@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { MENU_ITEMS as menuItems } from '../constants';
 import Image from 'next/image';
 import SupunPortrait from '../../public/portraits/Supun.png';
 import SEiGS_image from '../../public/news/SEiGS.jpeg';
@@ -37,7 +36,7 @@ We invite you to join us in this vibrant conversation about the future of softwa
 export default function NewsPage() {
   return (
     <div>
-      <Navbar menuItems={menuItems} pageSelected="" />
+      <Navbar pageSelected="" />
       <div className="flex flex-col bg-gray-50 min-h-screen p-8">
         <h1 className="text-3xl font-bold mb-4">News</h1>
         <ul className="space-y-4">

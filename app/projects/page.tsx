@@ -4,7 +4,6 @@ import ProjectCard from '../components/ProjectCard';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import * as CONSTANTS from '../constants';
-import { MENU_ITEMS as menuItems } from '../constants';
 import ToolCard from '../components/ToolCard';
 import ClassVizImage from '../../public/tools/classViz.jpg'
 import ArvisanImage from '../../public/tools/arvisan.jpg'
@@ -14,7 +13,7 @@ import BubbleTeaVizImage from '../../public/tools/BubbleTeaViz.png'
 export default function Home() {
   return (
     <NextUIProvider>
-      <Navbar menuItems={menuItems} pageSelected="" />
+      <Navbar pageSelected="" />
       <main className="flex min-h-screen flex-col items-center bg-gray-50">
         <h1 className="text-3xl font-bold text-red-600 mb-4 p-4 pb-0">
           Research Projects

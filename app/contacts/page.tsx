@@ -4,12 +4,11 @@ import ContactCard from '../components/ContactCard';
 import MichelPortrait from '../../public/portraits/michel.jpeg';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { MENU_ITEMS as menuItems } from '../constants';
 
 export default function ContactsPage() {
   return (
     <div>
-      <Navbar menuItems={menuItems} pageSelected="" />
+      <Navbar pageSelected="" />
       <div className="flex flex-col items-center bg-gray-50 gap-8 justify-center min-h-screen">
         <div className="max-w-7xl w-full bg-gray-50">
           <h1 className="text-3xl font-bold pt-6 mb-4">Contact</h1>

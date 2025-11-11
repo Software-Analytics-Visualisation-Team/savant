@@ -6,7 +6,6 @@ import { Link } from '@nextui-org/react';
 import Image from 'next/image';
 import IndustryImage from '../../public/industry-image-3.jpg';
 import JProfilerLogo from '../../public/jprofiler_large.png';
-import { MENU_ITEMS as menuItems } from '../constants';
 import { MichelContact } from '../person-constants';
 
 const tools = [
@@ -91,7 +90,7 @@ const collaborators = [
 export default function IndustrialCollaborationsPage() {
   return (
     <div>
-      <Navbar menuItems={menuItems} pageSelected="" />
+      <Navbar pageSelected="" />
       <div
         className="flex flex-col items-center justify-center bg-gray-50 min-h-screen"
       >

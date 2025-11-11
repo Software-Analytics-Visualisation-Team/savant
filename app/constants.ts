@@ -1,3 +1,11 @@
+export const MENU_ITEMS = [
+  { name: 'Industrial Collaborations', route: '/industrial-collabs' },
+  { name: 'Projects & Tools', route: '/projects' },
+  { name: 'Knowledge Hub', route: '/knowledge-hub' },
+  { name: 'News', route: '/news' },
+  { name: 'Contact us', route: '/contacts' },
+];
+
 // DeductiveSar
 export const DEDUCTIVE_SAR_TITLE = 'Deductive Software Architecture Recovery';
 export const DEDUCTIVE_SAR_INFO =
@@ -67,13 +75,3 @@ export const BUBBLETEAVIZ_DESC =
 export const BUBBLETEAVIZ_HREF = '';
 export const BUBBLETEAVIZ_CONTACTS = 'Michel Chaudron, Satrio Adi Rukmono';
 export const BUBBLETEAVIZ_STATUS = 'Active';
-
-
-export const MENU_ITEMS = [
-  { name: 'Industrial Collaborations', route: '/savant/industrial-collabs' },
-  { name: 'SEiGS 2025', route: '/savant/seigs25' },
-  { name: 'Projects & Tools', route: '/savant/projects' },
-  { name: 'Knowledge Hub', route: '/savant/knowledge-hub' },
-  { name: 'News', route: '/savant/news' },
-  { name: 'Contact us', route: '/savant/contacts' }
-];

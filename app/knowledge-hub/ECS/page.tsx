@@ -7,7 +7,6 @@ import Footer from '../../components/Footer';
 import { useEffect, useMemo, useRef } from 'react';
 
 import { KevinContact } from '@/app/person-constants';
-import { MENU_ITEMS as menuItems } from '../../constants';
 
 import ECSImage from '../../../public/knowledge-hub/ECS/ECS.jpg';
 
@@ -22,7 +21,7 @@ export default function Home() {
     return match ? match[0] : '';
   }, []);
 
-  const SRC = `${basePath}/savant/knowledge-hub/ECS/paper.html`;
+  const SRC = `${basePath}/knowledge-hub/ECS/paper.html`;
   
   useEffect(() => {
     const ifr = iframeRef.current;
@@ -51,7 +50,7 @@ export default function Home() {
 
   return (
     <div>
-      <Navbar menuItems={menuItems} pageSelected="" />
+      <Navbar pageSelected="" />
 
       <div className="flex flex-col items-center justify-center bg-gray-50 min-h-screen" style={{textAlign: 'justify'}}>
         <div className="max-w-5xl">
