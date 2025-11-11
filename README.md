@@ -29,19 +29,20 @@ You can view the live website here:
 ## Getting Started  
 ### Prerequisites  
 - Node.js (check `package.json` for exact version)  
-- Yarn or npm  
+- npm  
 - Git
 
+## Development
 ### Installation  
 ```bash
 git clone https://github.com/Software-Analytics-Visualisation-Team/savant.git
 cd savant
-npm install   # or yarn install
+npm install
 ```
 
 ### Running Locally
 ```bash
-npm run dev  # or yarn dev
+npm run dev
 ```
 
 This starts the development server (likely on http://localhost:3000).
@@ -50,8 +51,8 @@ This starts the development server (likely on http://localhost:3000).
 
 Deployment is likely via GitHub Pages; check .github/workflows/ for automation details.
 
-### Structure
-```lua
+## Structure
+```
 /
 ├─ .github/workflows/      → CI/CD workflows
 ├─ app/                    → Application source code (pages/components etc)
@@ -71,7 +72,7 @@ We welcome contributions! Fix typos, update team info, add new projects, or impr
 
 ### How to propose changes
 
-Create a new branch (git checkout -b feature/YourFeature)
+Create a new branch
 
 1. Make changes, commit, and push
 2. Open a Pull Request with a description
@@ -80,7 +81,7 @@ Create a new branch (git checkout -b feature/YourFeature)
 ### Guidelines
 
 - Follow ESLint/Prettier code style
-- Use meaningful commit messages
+- Use meaningful commit messages (use semantic commit notation)
 - Optimize images and assets added to public/
 
 ### License
