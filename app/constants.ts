@@ -46,7 +46,7 @@ export const ANDROMEDA_PLATFORM_USE_DESC =
   'We have a publicly available instance of Andromeda. However, the development focus is on integrating tools into the platform and including support for various languages. Therefore, currently we are willing to share this instance with our collaborators. ';
 export const ANDROMEDA_COLLABORATOR_DESC =
   'Do you have a tool that you would like to be integrated in Andromeda? Are you interesting in developing Andromeda together with us? Would you like to use it in a (research) project, or apply it in a industrial context? Do you have an idea on how to help develop a community around Andromeda. Please write us an email using the email addresses below! We are actively looking for all kinds of collaborators!';
-export const ANDROMEDA_PLATFORM_HREF = './projects/galaxy';
+export const ANDROMEDA_PLATFORM_HREF = './galaxy';
 export const ANDROMEDA_PLATFORM_CONTACTS = 'Michel Chaudron, Filip Zamfirov';
 export const ANDROMEDA_PLATFORM_STATUS = 'Active';
 export const GALAXY_PROJECT_DESC =
