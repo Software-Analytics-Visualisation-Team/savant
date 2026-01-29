@@ -4,44 +4,23 @@ import Image from 'next/image';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
-import { useEffect, useMemo, useRef } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
 import { KevinContact } from '@/app/person-constants';
 
 import ECSImage from '../../../public/knowledge-hub/ECS/ECS.jpg';
 
 export default function Home() {
-  const iframeRef = useRef<HTMLIFrameElement | null>(null);
-  // Auto-resize iframe height after it loads (same-origin, so allowed)
-  
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-
-  const SRC = `${basePath}/knowledge-hub/ECS/paper.html`;
+  const SRC = `${basePath}/knowledge-hub/ECS/ECSPattern - old.html`;
+  const [htmlContent, setHtmlContent] = useState<string>("");  
   
   useEffect(() => {
-    const ifr = iframeRef.current;
-    if (!ifr) return;
-
-    const handleLoad = () => {
-      try {
-        const doc = ifr.contentDocument || ifr.contentWindow?.document;
-        if (!doc) return;
-        // compute height using scrollHeight of the page
-        const height = Math.max(
-          doc.documentElement?.scrollHeight || 0,
-          doc.body?.scrollHeight || 0
-        );
-        ifr.style.height = `${height}px`;
-      } catch (e) {
-        // If cross-origin (shouldn't be for /public), skip
-        console.warn('Could not auto-resize iframe:', e);
-      }
-    };
-
-    ifr.addEventListener('load', handleLoad);
-    return () => ifr.removeEventListener('load', handleLoad);
-  }, []);
-
+      fetch(SRC)
+        .then((res) => res.text())
+        .then((data) => setHtmlContent(data))
+        .catch((err) => console.error("Error loading HTML:", err));
+    }, [])
 
   return (
     <div>
@@ -61,19 +40,12 @@ export default function Home() {
           />
           <a href="https://doi.org/10.1016/j.simpat.2020.102243"> 
           Vico: An entity-component-system based co-simulation framework
-          </a>
-          
-          <iframe
-            ref={iframeRef}
-            src={SRC}
-            title="Paper"
-            style={{
-              width: '100%',
-              height: '80vh', // initial height; will auto-resize
-              border: 'none',
-              background: 'transparent',
-            }}
-          />
+          </a>     
+
+          <div>
+            {/* Inject HTML */}
+            <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
+          </div>
 
           {/* Contact Section */}
           <div className="border-t mt-4 pt-4">
